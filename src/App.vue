@@ -1,85 +1,776 @@
-<script setup>
+<script>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+export default {
+
+    name: 'Index',
+    data() {
+        return {
+            images:
+            {
+                url: '@/assets//src/assets/images/logo.png',
+                name: 'My Image 1',
+            }
+        }
+    },
+    mounted() {
+
+        (function ($) {
+            'use strict';
+
+            /* ========================================================================= */
+            /*	Page Preloader
+            /* ========================================================================= */
+
+            // window.load = function () {
+            // 	document.getElementById('preloader').style.display = 'none';
+            // }
+
+            $(window).on('load', function () {
+                $('#preloader').fadeOut('slow', function () {
+                    $(this).remove();
+                    // alert("test");  
+
+                });
+            });
+
+
+            //Hero Slider
+            $('.hero-slider').slick({
+                autoplay: true,
+                infinite: true,
+                arrows: true,
+                prevArrow: '<button type=\'button\' class=\'prevArrow\'></button>',
+                nextArrow: '<button type=\'button\' class=\'nextArrow\'></button>',
+                dots: false,
+                autoplaySpeed: 7000,
+                pauseOnFocus: false,
+                pauseOnHover: false
+            });
+            $('.hero-slider').slickAnimation();
+
+
+            /* ========================================================================= */
+            /*	Header Scroll Background Change
+            /* ========================================================================= */
+
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                //console.log(scroll);
+                if (scroll > 200) {
+                    //console.log('a');
+                    $('.navigation').addClass('sticky-header');
+                } else {
+                    //console.log('a');
+                    $('.navigation').removeClass('sticky-header');
+                }
+            });
+
+            /* ========================================================================= */
+            /*	Portfolio Filtering Hook
+            /* =========================================================================  */
+
+            // filter
+            setTimeout(function () {
+                var containerEl = document.querySelector('.filtr-container');
+                var filterizd;
+                if (containerEl) {
+                    filterizd = $('.filtr-container').filterizr({});
+                }
+            }, 500);
+
+            /* ========================================================================= */
+            /*	Testimonial Carousel
+            /* =========================================================================  */
+
+            //Init the slider
+            $('.testimonial-slider').slick({
+                infinite: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+
+
+            /* ========================================================================= */
+            /*	Clients Slider Carousel
+            /* =========================================================================  */
+
+            //Init the slider
+            $('.clients-logo-slider').slick({
+                infinite: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                slidesToShow: 5,
+                slidesToScroll: 1
+            });
+
+
+
+
+            /* ========================================================================= */
+            /*	Company Slider Carousel
+            /* =========================================================================  */
+            $('.company-gallery').slick({
+                infinite: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                slidesToShow: 5,
+                slidesToScroll: 1
+            });
+
+
+            /* ========================================================================= */
+            /*   Contact Form Validating
+            /* ========================================================================= */
+
+            $('#contact-form').validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 4
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    subject: {
+                        required: false
+                    },
+                    message: {
+                        required: true
+                    }
+                },
+                messages: {
+                    user_name: {
+                        required: 'Come on, you have a name don\'t you?',
+                        minlength: 'Your name must consist of at least 2 characters'
+                    },
+                    email: {
+                        required: 'Please put your email address'
+                    },
+                    message: {
+                        required: 'Put some messages here?',
+                        minlength: 'Your name must consist of at least 2 characters'
+                    }
+                },
+                submitHandler: function (form) {
+                    $(form).ajaxSubmit({
+                        type: 'POST',
+                        data: $(form).serialize(),
+                        url: 'sendmail.php',
+                        success: function () {
+                            $('#contact-form #success').fadeIn();
+                        },
+                        error: function () {
+                            $('#contact-form #error').fadeIn();
+                        }
+                    });
+                }
+            }
+
+            );
+
+            /* ========================================================================= */
+            /*	On scroll fade/bounce effect
+            /* ========================================================================= */
+            var scroll = new SmoothScroll('a[href*="#"]');
+
+            // -----------------------------
+            //  Count Up
+            // -----------------------------
+            function counter() {
+                if ($('.counter').length !== 0) {
+                    var oTop = $('.counter').offset().top - window.innerHeight;
+                }
+                if ($(window).scrollTop() > oTop) {
+                    $('.counter').each(function () {
+                        var $this = $(this),
+                            countTo = $this.attr('data-count');
+                        $({
+                            countNum: $this.text()
+                        }).animate({
+                            countNum: countTo
+                        }, {
+                            duration: 1000,
+                            easing: 'swing',
+                            step: function () {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function () {
+                                $this.text(this.countNum);
+                            }
+                        });
+                    });
+                }
+            }
+            // -----------------------------
+            //  On Scroll
+            // -----------------------------
+            $(window).scroll(function () {
+                counter();
+            });
+
+        })(jQuery);
+
+    }
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <!-- <header>
+                                                                                                                                <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+                                                                                                                    <div class="wrapper">
+                                                                                                                              <HelloWorld msg="You did it!" />
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+                                                                                                                                      <nav>
+                                                                                                                                                                        <RouterLink to="/">Home</RouterLink>
+                                                                                                                                                                        <RouterLink to="/about">About</RouterLink>
+                                                                                                                                                                      </nav>
+                                                                                                                                                                    </div>
+                                                                                                                                                                  </header>
+
+                                                                                                                              <RouterView /> -->
+
+
+
+
+
+<!--
+                                                                                                        Fixed Navigation
+                                                                                                                    ==================================== -->
+    <div id="body">
+        <div id="preloader">
+            <div class='preloader'>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+
+    <header class="navigation fixed-top">
+        <div class="container">
+                <!-- main nav -->
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <!-- logo -->
+                    <a class="navbar-brand logo" href="index.html">
+                        <img class="logo-default" src="/src/assets/images/logo.png" alt="logo" />
+                        <img class="logo-white" src="/src/assets/images/logo-white.png" alt="logo" />
+                    </a>
+                    <!-- /logo -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navigation">
+                        <ul class="navbar-nav ml-auto text-center">
+                            <li class="nav-item dropdown active">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Homepage
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="index.html">Homepage</a>
+                                    <a class="dropdown-item" href="onepage-slider.html">Onepage</a>
+                                    <a class="dropdown-item" href="onepage-text.html">Onepage 2</a>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="service.html">Services</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="portfolio.html">Portfolio</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="team.html">Team</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Pages
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="404.html">404 Page</a>
+                                    <a class="dropdown-item" href="blog.html">Blog Page</a>
+                                    <a class="dropdown-item" href="single-post.html">Blog Single Page</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- /main nav -->
+            </div>
+        </header>
+
+
+        <div class="hero-slider">
+            <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-1.jpg);">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Crafting Digital <br>
+                                Experience</h1>
+                            <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Lorem ipsum dolor sit
+                                amet, consectetur adipisicing elit. Quod, <br> veritatis tempore nostrum id
+                                officia quaerat eum corrupti, <br> ipsa aliquam velit.</p>
+                            <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main"
+                                href="service.html">Explore Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-2.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">We Combine Design
+                                <br> and
+                                Creativity
+                            </h1>
+                            <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5">Create just what you
+                                need
+                                for your Perfect Website. Choose from a wide range
+                                <br> of Elements & simply put them on our Canvas.
+                            </p>
+                            <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8" class="btn btn-main"
+                                href="service.html">Explore Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--
+                                            Start About Section
+                                            ==================================== -->
+        <section class="service-2 section">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12">
+                        <!-- section title -->
+                        <div class="title text-center">
+                            <h2>What Do We Offer</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet,
+                                consectetur
+                                adipisicing elit. Voluptates, earum. </p>
+                            <div class="border"></div>
+                        </div>
+                        <!-- /section title -->
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <img src="/src/assets/images/about/member.jpg" class="inline-block" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row text-center">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="service-item">
+                                    <i class="tf-ion-ios-alarm-outline"></i>
+                                    <h4>Time Management</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui
+                                        venenatis.</p>
+                                </div>
+                            </div><!-- END COL -->
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="service-item">
+                                    <i class="tf-ion-ios-briefcase-outline"></i>
+                                    <h4>Marketing Ideas</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui
+                                        venenatis.</p>
+                                </div>
+                            </div><!-- END COL -->
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="service-item">
+                                    <i class="tf-ion-ios-email-outline"></i>
+                                    <h4>Mail Support</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui
+                                        venenatis.</p>
+                                </div>
+                            </div><!-- END COL -->
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="service-item">
+                                <i class="tf-ion-ios-locked-outline"></i>
+                                <h4>Secure System</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui
+                                        venenatis.</p>
+                                </div>
+                            </div><!-- END COL -->
+                        </div>
+                    </div>
+                </div> <!-- End row -->
+            </div> <!-- End container -->
+        </section> <!-- End section -->
+
+        <!--
+                                            Start About Section
+                                            ==================================== -->
+        <section class="about-2 section" id="about">
+            <div class="container">
+                <div class="row">
+
+                    <!-- section title -->
+                    <div class="col-12">
+                        <div class="title text-center">
+                            <h2>We Are Bingo Agency</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam reprehenderit accusamus
+                                labore iusto,
+                                aut, eum itaque illo totam tempora eius.</p>
+                            <div class="border"></div>
+                        </div>
+                    </div>
+                    <!-- /section title -->
+
+                    <div class="col-md-6">
+                        <img src="/src/assets/images/about/about-2.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="checklist">
+                            <li>Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem laca quam venenatis
+                                vestibulum.</li>
+                            <li>Aenean quam. Pellentesque ornare sem laca quam venenatis vestibulum.</li>
+                            <li>Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem laca quam venenatis
+                                vestibulum.</li>
+                            <li>Etiam porta sem multipage evint landing magna mollis euismod a pharetra augue.</li>
+                            <li>Aenean quam. Pellentesque ornare sem laca quam venenatis vestibulum.</li>
+                        </ul>
+                        <a href="#" class="btn btn-main mt-20">Learn More</a>
+                    </div>
+                </div> <!-- End row -->
+            </div> <!-- End container -->
+        </section> <!-- End section -->
+
+        <!--
+                                            Start Call To Action
+                                            ==================================== -->
+        <section class="call-to-action section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>Let's Create Something Together</h2>
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin bibendum auctor, <br> nisi elit
+                            consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit.</p>
+                        <a href="" class="btn btn-main">Contact Us</a>
+                    </div>
+                </div> <!-- End row -->
+            </div> <!-- End container -->
+        </section> <!-- End section -->
+
+        <!--
+                                            		Start Counter Section
+                                            		==================================== -->
+
+        <section class="counter-wrapper section-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="title">
+                            <h2>Award-Winning Agency</h2>
+                            <p>Vestibulum nisl tortor, consectetur quis imperdiet bibendum, laoreet sed arcu. Sed
+                                condimentum iaculis ex, in faucibus lorem accumsan non. Donec mattis tincidunt metus. Morbi
+                                sed tortor a risus luctus dignissim.</p>
+                        </div>
+                    </div>
+                    <!-- first count item -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center ">
+                        <div class="counters-item">
+                            <i class="tf-ion-ios-alarm-outline"></i>
+                            <div>
+                                <span class="counter" data-count="150">0</span>
+                            </div>
+                            <h3>Happy Clients</h3>
+                        </div>
+                    </div>
+                    <!-- end first count item -->
+
+                    <!-- second count item -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center ">
+                        <div class="counters-item">
+                            <i class="tf-ion-ios-analytics-outline"></i>
+                            <div>
+                                <span class="counter" data-count="130">0</span>
+                            </div>
+                            <h3>Projects completed</h3>
+                        </div>
+                    </div>
+                    <!-- end second count item -->
+
+                    <!-- third count item -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center ">
+                        <div class="counters-item">
+                            <i class="tf-ion-ios-compose-outline"></i>
+                            <div>
+                                <span class="counter" data-count="99">0</span>
+                            </div>
+                            <h3>Positive feedback</h3>
+
+                        </div>
+                    </div>
+                    <!-- end third count item -->
+
+                    <!-- fourth count item -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center ">
+                        <div class="counters-item kill-border">
+                            <i class="tf-ion-ios-bolt-outline"></i>
+                            <div>
+                                <span class="counter" data-count="250">0</span>
+                            </div>
+                            <h3>Cups of Coffee</h3>
+                        </div>
+                    </div>
+                    <!-- end fourth count item -->
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section> <!-- end section -->
+
+        <!-- Start Testimonial
+                                            =========================================== -->
+
+        <section class="testimonial section" id="testimonial">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- testimonial wrapper -->
+                        <div class="testimonial-slider">
+                            <!-- testimonial single -->
+                            <div class="item text-center">
+                                <i class="tf-ion-chatbubbles"></i>
+                                <!-- client info -->
+                                <div class="client-details">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum.
+                                        Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis
+                                        voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?
+                                    </p>
+                                </div>
+                                <!-- /client info -->
+                                <!-- client photo -->
+                                <div class="client-thumb">
+                                    <img src="/src/assets/images/client-logo/clients-1.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="client-meta">
+                                    <h3>William Martin</h3>
+                                    <span>CEO , Company Name</span>
+                                </div>
+                                <!-- /client photo -->
+                            </div>
+                            <!-- /testimonial single -->
+
+                            <!-- testimonial single -->
+                            <div class="item text-center">
+                                <i class="tf-ion-chatbubbles"></i>
+                                <!-- client info -->
+                                <div class="client-details">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum.
+                                        Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis
+                                        voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?
+                                    </p>
+                                </div>
+                                <!-- /client info -->
+                                <!-- client photo -->
+                                <div class="client-thumb">
+                                    <img src="/src/assets/images/client-logo/clients-2.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="client-meta">
+                                    <h3>Emma Harrison</h3>
+                                    <span>CEO , Company Name</span>
+                                </div>
+                                <!-- /client photo -->
+                            </div>
+                            <!-- /testimonial single -->
+
+                            <!-- testimonial single -->
+                            <div class="item text-center">
+                                <i class="tf-ion-chatbubbles"></i>
+                                <!-- client info -->
+                                <div class="client-details">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum.
+                                        Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis
+                                        voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?
+                                    </p>
+                                </div>
+                                <!-- /client info -->
+                                <!-- client photo -->
+                                <div class="client-thumb">
+                                    <img src="/src/assets/images/client-logo/clients-3.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="client-meta">
+                                    <h3>Alexander Lucas</h3>
+                                    <span>CEO , Company Name</span>
+                                </div>
+                                <!-- /client photo -->
+                            </div>
+                            <!-- /testimonial single -->
+                        </div>
+                    </div> <!-- end col lg 12 -->
+                </div> <!-- End row -->
+            </div> <!-- End container -->
+        </section> <!-- End Section -->
+
+        <!--
+                                            		Start Blog Section
+                                            		=========================================== -->
+
+        <section class="blog" id="blog">
+            <div class="container">
+                <div class="row">
+
+                    <!-- section title -->
+                    <div class="col-12">
+                        <div class="title text-center ">
+                            <h2> Latest <span class="color">Posts</span></h2>
+                            <div class="border"></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus facere accusamus,
+                                reprehenderit libero
+                                inventore nam.</p>
+                        </div>
+                    </div>
+                    <!-- /section title -->
+                    <!-- single blog post -->
+                    <article class="col-md-4 col-sm-6 col-xs-12 clearfix ">
+                        <div class="post-item">
+                            <div class="media-wrapper">
+                                <img src="/src/assets/images/blog/post-1.jpg" alt="amazing caves coverimage"
+                                    class="img-fluid">
+                            </div>
+
+                            <div class="content">
+                                <h3><a href="single-post.html">Reasons to Smile</a></h3>
+                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                    squid. 3 wolf
+                                    moon officia aute, non skateboard dolor brunch.</p>
+                                <a class="btn btn-main" href="single-post.html">Read more</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- /single blog post -->
+
+                    <!-- single blog post -->
+                    <article class="col-md-4 col-sm-6 col-xs-12 ">
+                        <div class="post-item">
+                            <div class="media-wrapper">
+                                <img src="/src/assets/images/blog/post-2.jpg" alt="amazing caves coverimage"
+                                    class="img-fluid">
+                            </div>
+
+                            <div class="content">
+                                <h3><a href="single-post.html">A Few Moments</a></h3>
+                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                    squid. 3 wolf
+                                    moon officia aute, non skateboard dolor brunch.</p>
+                                <a class="btn btn-main" href="single-post.html">Read more</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- end single blog post -->
+
+                    <!-- single blog post -->
+                    <article class="col-md-4 col-sm-6 col-xs-12 ">
+                        <div class="post-item">
+                            <div class="media-wrapper">
+                                <img src="/src/assets/images/blog/post-3.jpg" alt="amazing caves coverimage"
+                                    class="img-fluid">
+                            </div>
+
+                            <div class="content">
+                                <h3><a href="single-post.html">Hints for Life</a></h3>
+                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                    squid. 3 wolf
+                                    moon officia aute, non skateboard dolor brunch.</p>
+                                <a class="btn btn-main" href="single-post.html">Read more</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- end single blog post -->
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section> <!-- end section -->
+
+
+
+
+
+
+
+
+        <footer id="footer" class="bg-one">
+            <div class="top-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <h3>about</h3>
+                            <p>Integer posuere erat a ante venenati dapibus posuere velit aliquet. Fusce dapibus, tellus
+                                cursus commodo, tortor mauris sed posuere.</p>
+                        </div>
+                        <!-- End of .col-sm-3 -->
+
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <ul>
+                                <li>
+                                    <h3>Our Services</h3>
+                                </li>
+                                <li><a href="#">Graphic Design</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Development</a></li>
+                            </ul>
+                        </div>
+                        <!-- End of .col-sm-3 -->
+
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <ul>
+                                <li>
+                                    <h3>Quick Links</h3>
+                                </li>
+                                <li><a href="#">Partners</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">FAQ’s</a></li>
+                                <li><a href="#">Badges</a></li>
+                            </ul>
+                        </div>
+                        <!-- End of .col-sm-3 -->
+
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <ul>
+                                <li>
+                                    <h3>Connect with us Socially</h3>
+                                </li>
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="#">Youtube</a></li>
+                                <li><a href="#">Pinterest</a></li>
+                            </ul>
+                        </div>
+                        <!-- End of .col-sm-3 -->
+
+                    </div>
+                </div> <!-- end container -->
+            </div>
+            <div class="footer-bottom">
+                <h5>Copyright 2016. All rights reserved.</h5>
+                <h6>Design and Developed by <a href="">Themefisher</a></h6>
+                <h6>Distributed by <a href="https://themewagon.com/">Themewagon</a></h6>
+            </div>
+        </footer> <!-- end footer -->
     </div>
-  </header>
-
-  <RouterView />
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
+<style></style>
