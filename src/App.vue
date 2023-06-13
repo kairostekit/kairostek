@@ -2,59 +2,266 @@
 import { RouterLink, RouterView } from 'vue-router'
 export default {
 
-};
+    name: 'Index',
+    data() {
+        return {
+            images:
+            {
+                url: '@/assets//src/assets/images/logo.png',
+                name: 'My Image 1',
+            }
+        }
+    },
+    mounted() {
+
+        (function ($) {
+            'use strict';
+
+            /* ========================================================================= */
+            /*	Page Preloader
+            /* ========================================================================= */
+
+            // window.load = function () {
+            // 	document.getElementById('preloader').style.display = 'none';
+            // }
+
+            $(window).on('load', function () {
+                $('#preloader').fadeOut('slow', function () {
+                    $(this).remove();
+                    // alert("test");  
+
+                });
+            });
+
+
+            //Hero Slider
+            $('.hero-slider').slick({
+                autoplay: true,
+                infinite: true,
+                arrows: true,
+                prevArrow: '<button type=\'button\' class=\'prevArrow\'></button>',
+                nextArrow: '<button type=\'button\' class=\'nextArrow\'></button>',
+                dots: false,
+                autoplaySpeed: 7000,
+                pauseOnFocus: false,
+                pauseOnHover: false
+            });
+            $('.hero-slider').slickAnimation();
+
+
+            /* ========================================================================= */
+            /*	Header Scroll Background Change
+            /* ========================================================================= */
+
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                //console.log(scroll);
+                if (scroll > 200) {
+                    //console.log('a');
+                    $('.navigation').addClass('sticky-header');
+                } else {
+                    //console.log('a');
+                    $('.navigation').removeClass('sticky-header');
+                }
+            });
+
+            /* ========================================================================= */
+            /*	Portfolio Filtering Hook
+            /* =========================================================================  */
+
+            // filter
+            setTimeout(function () {
+                var containerEl = document.querySelector('.filtr-container');
+                var filterizd;
+                if (containerEl) {
+                    filterizd = $('.filtr-container').filterizr({});
+                }
+            }, 500);
+
+            /* ========================================================================= */
+            /*	Testimonial Carousel
+            /* =========================================================================  */
+
+            //Init the slider
+            $('.testimonial-slider').slick({
+                infinite: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+
+
+            /* ========================================================================= */
+            /*	Clients Slider Carousel
+            /* =========================================================================  */
+
+            //Init the slider
+            $('.clients-logo-slider').slick({
+                infinite: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                slidesToShow: 5,
+                slidesToScroll: 1
+            });
+
+
+
+
+            /* ========================================================================= */
+            /*	Company Slider Carousel
+            /* =========================================================================  */
+            $('.company-gallery').slick({
+                infinite: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                slidesToShow: 5,
+                slidesToScroll: 1
+            });
+
+
+            /* ========================================================================= */
+            /*   Contact Form Validating
+            /* ========================================================================= */
+
+            $('#contact-form').validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 4
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    subject: {
+                        required: false
+                    },
+                    message: {
+                        required: true
+                    }
+                },
+                messages: {
+                    user_name: {
+                        required: 'Come on, you have a name don\'t you?',
+                        minlength: 'Your name must consist of at least 2 characters'
+                    },
+                    email: {
+                        required: 'Please put your email address'
+                    },
+                    message: {
+                        required: 'Put some messages here?',
+                        minlength: 'Your name must consist of at least 2 characters'
+                    }
+                },
+                submitHandler: function (form) {
+                    $(form).ajaxSubmit({
+                        type: 'POST',
+                        data: $(form).serialize(),
+                        url: 'sendmail.php',
+                        success: function () {
+                            $('#contact-form #success').fadeIn();
+                        },
+                        error: function () {
+                            $('#contact-form #error').fadeIn();
+                        }
+                    });
+                }
+            }
+
+            );
+
+            /* ========================================================================= */
+            /*	On scroll fade/bounce effect
+            /* ========================================================================= */
+            var scroll = new SmoothScroll('a[href*="#"]');
+
+            // -----------------------------
+            //  Count Up
+            // -----------------------------
+            function counter() {
+                if ($('.counter').length !== 0) {
+                    var oTop = $('.counter').offset().top - window.innerHeight;
+                }
+                if ($(window).scrollTop() > oTop) {
+                    $('.counter').each(function () {
+                        var $this = $(this),
+                            countTo = $this.attr('data-count');
+                        $({
+                            countNum: $this.text()
+                        }).animate({
+                            countNum: countTo
+                        }, {
+                            duration: 1000,
+                            easing: 'swing',
+                            step: function () {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function () {
+                                $this.text(this.countNum);
+                            }
+                        });
+                    });
+                }
+            }
+            // -----------------------------
+            //  On Scroll
+            // -----------------------------
+            $(window).scroll(function () {
+                counter();
+            });
+
+        })(jQuery);
+
+    }
+}
 </script>
 
 <template>
     <!-- <header>
-                                        <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+                                                                                                                                <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-                                        <div class="wrapper">
-                                          <HelloWorld msg="You did it!" />
+                                                                                                                    <div class="wrapper">
+                                                                                                                              <HelloWorld msg="You did it!" />
 
-                                          <nav>
-                                                                            <RouterLink to="/">Home</RouterLink>
-                                                                            <RouterLink to="/about">About</RouterLink>
-                                                                          </nav>
-                                                                        </div>
-                                                                      </header>
+                                                                                                                                      <nav>
+                                                                                                                                                                        <RouterLink to="/">Home</RouterLink>
+                                                                                                                                                                        <RouterLink to="/about">About</RouterLink>
+                                                                                                                                                                      </nav>
+                                                                                                                                                                    </div>
+                                                                                                                                                                  </header>
 
-                                      <RouterView /> -->
-
-
+                                                                                                                              <RouterView /> -->
 
 
 
-    <!--
-                                Fixed Navigation
-                                ==================================== -->
+
+
+<!--
+                                                                                                        Fixed Navigation
+                                                                                                                    ==================================== -->
     <div id="body">
-        <!--
-              Start Preloader
-              ==================================== -->
         <div id="preloader">
             <div class='preloader'>
                 <span></span>
                 <span></span>
-            <span></span>
-            <span></span>
+                <span></span>
+                <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
-        <!--
-              End Preloader
-              ==================================== -->
 
 
-        <header class="navigation fixed-top">
-            <div class="container">
+    <header class="navigation fixed-top">
+        <div class="container">
                 <!-- main nav -->
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- logo -->
                     <a class="navbar-brand logo" href="index.html">
-                        <img class="logo-default" src="../public/images/logo.png" alt="logo" />
-                        <img class="logo-white" src="../public/images/logo-white.png" alt="logo" />
+                        <img class="logo-default" src="/src/assets/images/logo.png" alt="logo" />
+                        <img class="logo-white" src="/src/assets/images/logo-white.png" alt="logo" />
                     </a>
                     <!-- /logo -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
@@ -113,8 +320,8 @@ export default {
 
 
         <div class="hero-slider">
-            <div class="slider-item th-fullpage hero-area" style="background-image: url(../public/images/slider/slider-bg-1.jpg);">
-                <div class="container">
+            <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-1.jpg);">
+            <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Crafting Digital <br>
@@ -128,7 +335,7 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="slider-item th-fullpage hero-area" style="background-image: url(../public/images/slider/slider-bg-2.jpg);">
+            <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-2.jpg);">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
@@ -146,15 +353,13 @@ export default {
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
-    </div>
-
-
 
 
         <!--
-    Start About Section
-    ==================================== -->
+                                            Start About Section
+                                            ==================================== -->
         <section class="service-2 section">
             <div class="container">
                 <div class="row">
@@ -172,7 +377,7 @@ export default {
                     </div>
 
                     <div class="col-md-4 text-center">
-                        <img src="../public/images/about/member.jpg" class="inline-block" alt="">
+                        <img src="/src/assets/images/about/member.jpg" class="inline-block" alt="">
                     </div>
                     <div class="col-md-8">
                         <div class="row text-center">
@@ -202,21 +407,21 @@ export default {
                             </div><!-- END COL -->
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="service-item">
-                                    <i class="tf-ion-ios-locked-outline"></i>
-                                    <h4>Secure System</h4>
+                                <i class="tf-ion-ios-locked-outline"></i>
+                                <h4>Secure System</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui
                                         venenatis.</p>
                                 </div>
                             </div><!-- END COL -->
+                        </div>
                     </div>
-                </div>
                 </div> <!-- End row -->
             </div> <!-- End container -->
         </section> <!-- End section -->
 
         <!--
-    Start About Section
-    ==================================== -->
+                                            Start About Section
+                                            ==================================== -->
         <section class="about-2 section" id="about">
             <div class="container">
                 <div class="row">
@@ -234,7 +439,7 @@ export default {
                     <!-- /section title -->
 
                     <div class="col-md-6">
-                        <img src="../public/images/about/about-2.png" class="img-fluid" alt="">
+                        <img src="/src/assets/images/about/about-2.png" class="img-fluid" alt="">
                     </div>
                     <div class="col-md-6">
                         <ul class="checklist">
@@ -246,15 +451,15 @@ export default {
                             <li>Etiam porta sem multipage evint landing magna mollis euismod a pharetra augue.</li>
                             <li>Aenean quam. Pellentesque ornare sem laca quam venenatis vestibulum.</li>
                         </ul>
-                    <a href="#" class="btn btn-main mt-20">Learn More</a>
-                </div>
+                        <a href="#" class="btn btn-main mt-20">Learn More</a>
+                    </div>
                 </div> <!-- End row -->
             </div> <!-- End container -->
         </section> <!-- End section -->
 
         <!--
-    Start Call To Action
-    ==================================== -->
+                                            Start Call To Action
+                                            ==================================== -->
         <section class="call-to-action section">
             <div class="container">
                 <div class="row">
@@ -262,15 +467,15 @@ export default {
                         <h2>Let's Create Something Together</h2>
                         <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin bibendum auctor, <br> nisi elit
                             consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit.</p>
-                    <a href="" class="btn btn-main">Contact Us</a>
-                </div>
+                        <a href="" class="btn btn-main">Contact Us</a>
+                    </div>
                 </div> <!-- End row -->
             </div> <!-- End container -->
         </section> <!-- End section -->
 
         <!--
-    		Start Counter Section
-    		==================================== -->
+                                            		Start Counter Section
+                                            		==================================== -->
 
         <section class="counter-wrapper section-sm">
             <div class="container">
@@ -329,14 +534,14 @@ export default {
                             </div>
                             <h3>Cups of Coffee</h3>
                         </div>
-                </div>
+                    </div>
                     <!-- end fourth count item -->
                 </div> <!-- end row -->
             </div> <!-- end container -->
         </section> <!-- end section -->
 
         <!-- Start Testimonial
-    =========================================== -->
+                                            =========================================== -->
 
         <section class="testimonial section" id="testimonial">
             <div class="container">
@@ -358,7 +563,7 @@ export default {
                                 <!-- /client info -->
                                 <!-- client photo -->
                                 <div class="client-thumb">
-                                    <img src="../public/images/client-logo/clients-1.jpg" class="img-fluid" alt="">
+                                    <img src="/src/assets/images/client-logo/clients-1.jpg" class="img-fluid" alt="">
                                 </div>
                                 <div class="client-meta">
                                     <h3>William Martin</h3>
@@ -382,7 +587,7 @@ export default {
                                 <!-- /client info -->
                                 <!-- client photo -->
                                 <div class="client-thumb">
-                                    <img src="../public/images/client-logo/clients-2.jpg" class="img-fluid" alt="">
+                                    <img src="/src/assets/images/client-logo/clients-2.jpg" class="img-fluid" alt="">
                                 </div>
                                 <div class="client-meta">
                                     <h3>Emma Harrison</h3>
@@ -406,7 +611,7 @@ export default {
                                 <!-- /client info -->
                                 <!-- client photo -->
                                 <div class="client-thumb">
-                                    <img src="../public/images/client-logo/clients-3.jpg" class="img-fluid" alt="">
+                                    <img src="/src/assets/images/client-logo/clients-3.jpg" class="img-fluid" alt="">
                                 </div>
                                 <div class="client-meta">
                                     <h3>Alexander Lucas</h3>
@@ -415,15 +620,15 @@ export default {
                                 <!-- /client photo -->
                             </div>
                             <!-- /testimonial single -->
-                    </div>
-                </div> <!-- end col lg 12 -->
+                        </div>
+                    </div> <!-- end col lg 12 -->
                 </div> <!-- End row -->
             </div> <!-- End container -->
         </section> <!-- End Section -->
 
         <!--
-    		Start Blog Section
-    		=========================================== -->
+                                            		Start Blog Section
+                                            		=========================================== -->
 
         <section class="blog" id="blog">
             <div class="container">
@@ -444,7 +649,8 @@ export default {
                     <article class="col-md-4 col-sm-6 col-xs-12 clearfix ">
                         <div class="post-item">
                             <div class="media-wrapper">
-                                <img src="../public/images/blog/post-1.jpg" alt="amazing caves coverimage" class="img-fluid">
+                                <img src="/src/assets/images/blog/post-1.jpg" alt="amazing caves coverimage"
+                                    class="img-fluid">
                             </div>
 
                             <div class="content">
@@ -462,7 +668,8 @@ export default {
                     <article class="col-md-4 col-sm-6 col-xs-12 ">
                         <div class="post-item">
                             <div class="media-wrapper">
-                                <img src="../public/images/blog/post-2.jpg" alt="amazing caves coverimage" class="img-fluid">
+                                <img src="/src/assets/images/blog/post-2.jpg" alt="amazing caves coverimage"
+                                    class="img-fluid">
                             </div>
 
                             <div class="content">
@@ -480,7 +687,8 @@ export default {
                     <article class="col-md-4 col-sm-6 col-xs-12 ">
                         <div class="post-item">
                             <div class="media-wrapper">
-                                <img src="../public/images/blog/post-3.jpg" alt="amazing caves coverimage" class="img-fluid">
+                                <img src="/src/assets/images/blog/post-3.jpg" alt="amazing caves coverimage"
+                                    class="img-fluid">
                             </div>
 
                             <div class="content">
@@ -498,6 +706,70 @@ export default {
         </section> <!-- end section -->
 
 
+
+
+
+
+
+
+        <footer id="footer" class="bg-one">
+            <div class="top-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <h3>about</h3>
+                            <p>Integer posuere erat a ante venenati dapibus posuere velit aliquet. Fusce dapibus, tellus
+                                cursus commodo, tortor mauris sed posuere.</p>
+                        </div>
+                        <!-- End of .col-sm-3 -->
+
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <ul>
+                                <li>
+                                    <h3>Our Services</h3>
+                                </li>
+                                <li><a href="#">Graphic Design</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Development</a></li>
+                            </ul>
+                        </div>
+                        <!-- End of .col-sm-3 -->
+
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <ul>
+                                <li>
+                                    <h3>Quick Links</h3>
+                                </li>
+                                <li><a href="#">Partners</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">FAQ’s</a></li>
+                                <li><a href="#">Badges</a></li>
+                            </ul>
+                        </div>
+                        <!-- End of .col-sm-3 -->
+
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <ul>
+                                <li>
+                                    <h3>Connect with us Socially</h3>
+                                </li>
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="#">Youtube</a></li>
+                                <li><a href="#">Pinterest</a></li>
+                            </ul>
+                        </div>
+                        <!-- End of .col-sm-3 -->
+
+                    </div>
+                </div> <!-- end container -->
+            </div>
+            <div class="footer-bottom">
+                <h5>Copyright 2016. All rights reserved.</h5>
+                <h6>Design and Developed by <a href="">Themefisher</a></h6>
+                <h6>Distributed by <a href="https://themewagon.com/">Themewagon</a></h6>
+            </div>
+        </footer> <!-- end footer -->
     </div>
 </template>
 
