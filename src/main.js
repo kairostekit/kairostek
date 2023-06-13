@@ -1,13 +1,16 @@
-import './assets/main.css'
+// import './assets/scss/style.scss'import './assets/scss/style.scss'
+// import './assets/css/style.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+// import  VueMeta  from 'vue-meta'
+
 
 import App from './App.vue'
 import router from './router'
 
 const app = createApp(App)
-
+// app.use(VueMeta)
 app.use(createPinia())
 app.use(router)
 
