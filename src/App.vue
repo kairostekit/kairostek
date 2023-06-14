@@ -1,13 +1,6 @@
 <script >
-
-import AboutView from './views/AboutView.vue';
 </script>
 
-<template>
-    <H1>Heml</H1>
+<template></template>
 
-</template>
-
-<style scoped>
-
-</style>
+<style scoped></style>
