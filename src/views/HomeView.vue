@@ -60,7 +60,7 @@ Start About Section
                 </div>
 
                 <div class="col-md-4 text-center">
-                    <img src="/public/images/about/member.jpg" class="inline-block" alt="">
+                    <img src="/images/about/member.jpg" class="inline-block" alt="">
                 </div>
                 <div class="col-md-8">
                     <div class="row text-center">
@@ -122,7 +122,7 @@ Start About Section
                 <!-- /section title -->
 
                 <div class="col-md-6">
-                    <img src="/public/images/about/about-2.png" class="img-fluid" alt="">
+                    <img src="/images/about/about-2.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-6">
                     <ul class="checklist">
@@ -246,7 +246,7 @@ Start Call To Action
                             <!-- /client info -->
                             <!-- client photo -->
                             <div class="client-thumb">
-                                <img src="/public/images/client-logo/clients-1.jpg" class="img-fluid" alt="">
+                                <img src="/images/client-logo/clients-1.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="client-meta">
                                 <h3>William Martin</h3>
@@ -270,7 +270,7 @@ Start Call To Action
                             <!-- /client info -->
                             <!-- client photo -->
                             <div class="client-thumb">
-                                <img src="/public/images/client-logo/clients-2.jpg" class="img-fluid" alt="">
+                                <img src="/images/client-logo/clients-2.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="client-meta">
                                 <h3>Emma Harrison</h3>
@@ -294,7 +294,7 @@ Start Call To Action
                             <!-- /client info -->
                             <!-- client photo -->
                             <div class="client-thumb">
-                                <img src="/public/images/client-logo/clients-3.jpg" class="img-fluid" alt="">
+                                <img src="/images/client-logo/clients-3.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="client-meta">
                                 <h3>Alexander Lucas</h3>
@@ -332,7 +332,7 @@ Start Call To Action
                 <article class="col-md-4 col-sm-6 col-xs-12 clearfix ">
                     <div class="post-item">
                         <div class="media-wrapper">
-                            <img src="/public/images/blog/post-1.jpg" alt="amazing caves coverimage" class="img-fluid">
+                            <img src="/images/blog/post-1.jpg" alt="amazing caves coverimage" class="img-fluid">
                         </div>
 
                         <div class="content">
@@ -350,7 +350,7 @@ Start Call To Action
                 <article class="col-md-4 col-sm-6 col-xs-12 ">
                     <div class="post-item">
                         <div class="media-wrapper">
-                            <img src="/public/images/blog/post-2.jpg" alt="amazing caves coverimage" class="img-fluid">
+                            <img src="/images/blog/post-2.jpg" alt="amazing caves coverimage" class="img-fluid">
                         </div>
 
                         <div class="content">
@@ -368,7 +368,7 @@ Start Call To Action
                 <article class="col-md-4 col-sm-6 col-xs-12 ">
                     <div class="post-item">
                         <div class="media-wrapper">
-                            <img src="/public/images/blog/post-3.jpg" alt="amazing caves coverimage" class="img-fluid">
+                            <img src="/images/blog/post-3.jpg" alt="amazing caves coverimage" class="img-fluid">
                         </div>
 
                         <div class="content">
