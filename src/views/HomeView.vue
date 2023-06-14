@@ -42,7 +42,7 @@
 
 <!--
 Start About Section
-        ==================================== -->
+                            ==================================== -->
     <section class="service-2 section">
         <div class="container">
             <div class="row">
@@ -104,7 +104,7 @@ Start About Section
 
 <!--
 Start About Section
-        ==================================== -->
+                            ==================================== -->
     <section class="about-2 section" id="about">
         <div class="container">
             <div class="row">
@@ -142,7 +142,7 @@ Start About Section
 
 <!--
 Start Call To Action
-        ==================================== -->
+                            ==================================== -->
     <section class="call-to-action section">
         <div class="container">
             <div class="row">
@@ -158,7 +158,7 @@ Start Call To Action
 
 <!--
 		Start Counter Section
-        		==================================== -->
+                            		==================================== -->
 
     <section class="counter-wrapper section-sm">
         <div class="container">
@@ -224,7 +224,7 @@ Start Call To Action
     </section> <!-- end section -->
 
 <!-- Start Testimonial
-        =========================================== -->
+                            =========================================== -->
 
     <section class="testimonial section" id="testimonial">
         <div class="container">
@@ -311,7 +311,7 @@ Start Call To Action
 
 <!--
 		Start Blog Section
-        		=========================================== -->
+                            		=========================================== -->
 
     <section class="blog" id="blog">
         <div class="container">
@@ -386,3 +386,73 @@ Start Call To Action
     </section> <!-- end section -->
 </template>
 
+
+<script>
+
+export default {
+    mounted() {
+        $('.hero-slider').slick({
+            autoplay: true,
+            infinite: true,
+            arrows: true,
+            prevArrow: '<button type=\'button\' class=\'prevArrow\'></button>',
+            nextArrow: '<button type=\'button\' class=\'nextArrow\'></button>',
+            dots: false,
+            autoplaySpeed: 7000,
+            pauseOnFocus: false,
+            pauseOnHover: false
+        });
+        $('.hero-slider').slickAnimation();
+
+
+        //Init the slider
+        $('.testimonial-slider').slick({
+            infinite: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000
+        });
+
+
+        /* ========================================================================= */
+        /*	On scroll fade/bounce effect
+        /* ========================================================================= */
+        var scroll = new SmoothScroll('a[href*="#"]');
+
+        // -----------------------------
+        //  Count Up
+        // -----------------------------
+        function counter() {
+            if ($('.counter').length !== 0) {
+                var oTop = $('.counter').offset().top - window.innerHeight;
+            }
+            if ($(window).scrollTop() > oTop) {
+                $('.counter').each(function () {
+                    var $this = $(this),
+                        countTo = $this.attr('data-count');
+                    $({
+                        countNum: $this.text()
+                    }).animate({
+                        countNum: countTo
+                    }, {
+                        duration: 1000,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                        }
+                    });
+                });
+            }
+        }
+        // -----------------------------
+        //  On Scroll
+        // -----------------------------
+        $(window).scroll(function () {
+            counter();
+        });
+    }
+}
+</script>

@@ -2,7 +2,8 @@
 import NavigationLayout from '../components/layouts/NavigationLayout.vue';
 import FooterLayout from '../components/layouts/FooterLayout.vue';
 import HomeView from './HomeView.vue';
-import  RouterView  from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router'
+
 
 
 </script>
@@ -10,7 +11,9 @@ import  RouterView  from 'vue-router'
 
 <template>
     <NavigationLayout />
-    <HomeView />
+
+    <RouterView />
+
     <FooterLayout />
 </template>
 

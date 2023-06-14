@@ -1,3 +1,8 @@
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+
+</script>
+
 <template>
     <header class="navigation fixed-top">
         <div class="container">
@@ -22,13 +27,14 @@
                                 Homepage
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="index.html">Homepage</a>
+                                <RouterLink to="/Home" class="dropdown-item">Homepage</RouterLink>
+                                <!-- <a class="dropdown-item" href="index.html">Homepage</a> -->
                                 <a class="dropdown-item" href="onepage-slider.html">Onepage</a>
                                 <a class="dropdown-item" href="onepage-text.html">Onepage 2</a>
                             </div>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="about.html">About Us</a>
+                            <RouterLink to="/About" class="nav-link">About Us</RouterLink>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="service.html">Services</a>
@@ -64,3 +70,25 @@
     </header>
 </template>
 
+<script>
+export default {
+    mounted() {
+
+        /* ========================================================================= */
+        /*	Header Scroll Background Change
+        /* ========================================================================= */
+
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            //console.log(scroll);
+            if (scroll > 200) {
+                //console.log('a');
+                $('.navigation').addClass('sticky-header');
+            } else {
+                //console.log('a');
+                $('.navigation').removeClass('sticky-header');
+            }
+        });
+    }
+}
+</script>

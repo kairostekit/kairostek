@@ -1,23 +1,32 @@
-<script setup >
-import AppView from '@/views/AppView.vue';
+
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
 
 </script>
-
-
 <template>
-    <div id="body">
-        <div class='preloader'>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+    <section class="single-page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Error Page</h2>
+                    
+                </div>
+            </div>
         </div>
-        <AppView />
-    </div>
+    </section>
+    <section class="page-404 section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>404</h1>
+                    <h2>Page Not Found</h2>
+                    <p>Sorry, but the page you were trying to view does not exist.</p>
+                    <RouterLink to="/Home" class="btn btn-main mt-20">Go Home</RouterLink>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
-
 
 
 <script >
@@ -30,16 +39,16 @@ export default {
             /*	Page Preloader
             /* ========================================================================= */
 
-            // window.load = function () {
-            // 	document.getElementById('preloader').style.display = 'none';
-            // }
+            window.load = function () {
+                $('.navigation').addClass('sticky-header');
+                document.getElementById('preloader').style.display = 'none';
+            }
 
             $(window).on('load', function () {
                 $('#preloader').fadeOut('slow', function () {
                     $(this).remove();
                 });
             });
-
 
             //Hero Slider
             $('.hero-slider').slick({
@@ -62,14 +71,7 @@ export default {
 
             $(window).scroll(function () {
                 var scroll = $(window).scrollTop();
-                //console.log(scroll);
-                if (scroll > 200) {
-                    //console.log('a');
-                    $('.navigation').addClass('sticky-header');
-                } else {
-                    //console.log('a');
-                    $('.navigation').removeClass('sticky-header');
-                }
+                $('.navigation').addClass('sticky-header');
             });
 
             /* ========================================================================= */
@@ -128,56 +130,6 @@ export default {
             });
 
 
-            /* ========================================================================= */
-            /*   Contact Form Validating
-            /* ========================================================================= */
-
-            $('#contact-form').validate({
-                rules: {
-                    name: {
-                        required: true,
-                        minlength: 4
-                    },
-                    email: {
-                        required: true,
-                        email: true
-                    },
-                    subject: {
-                        required: false
-                    },
-                    message: {
-                        required: true
-                    }
-                },
-                messages: {
-                    user_name: {
-                        required: 'Come on, you have a name don\'t you?',
-                        minlength: 'Your name must consist of at least 2 characters'
-                    },
-                    email: {
-                        required: 'Please put your email address'
-                    },
-                    message: {
-                        required: 'Put some messages here?',
-                        minlength: 'Your name must consist of at least 2 characters'
-                    }
-                },
-                submitHandler: function (form) {
-                    $(form).ajaxSubmit({
-                        type: 'POST',
-                        data: $(form).serialize(),
-                        url: 'sendmail.php',
-                        success: function () {
-                            $('#contact-form #success').fadeIn();
-                        },
-                        error: function () {
-                            $('#contact-form #error').fadeIn();
-                        }
-                    });
-                }
-            }
-
-            );
 
             /* ========================================================================= */
             /*	On scroll fade/bounce effect
@@ -224,3 +176,6 @@ export default {
     }
 }
 </script>
+
+
+<style lang="scss" scoped></style>
