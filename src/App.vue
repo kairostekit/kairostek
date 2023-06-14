@@ -1,12 +1,19 @@
-<script setup>
-// import { RouterLink, RouterView } from 'vue-router'
-// import HelloWorld from './components/HelloWorld.vue'
-import AboutView from './views/AboutView.vue';
+<script setup >
+import AppView from '@/views/AppView.vue';
 </script>
 
+
+
 <template>
-  <AboutView></AboutView>
-
+    <div id="body">
+        <div class='preloader'>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <AppView />
+    </div>
 </template>
-
-<style scoped></style>
