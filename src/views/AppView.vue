@@ -17,3 +17,12 @@ import { RouterLink, RouterView } from 'vue-router'
     <FooterLayout />
 </template>
 
+
+<script>
+
+export default {
+    mounted() {
+
+    }
+}
+</script>

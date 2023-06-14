@@ -5,16 +5,21 @@ import AppView from '@/views/AppView.vue';
 
 
 <template>
-    <div id="body">
-        <div class='preloader'>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+    <div id="body ">
+
+        <div id="preloader">
+            <div class='preloader'>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+
         <AppView />
+
     </div>
 </template>
 
@@ -29,7 +34,6 @@ export default {
             /* ========================================================================= */
             /*	Page Preloader
             /* ========================================================================= */
-
             // window.load = function () {
             // 	document.getElementById('preloader').style.display = 'none';
             // }
@@ -39,6 +43,7 @@ export default {
                     $(this).remove();
                 });
             });
+
 
 
             //Hero Slider

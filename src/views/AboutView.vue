@@ -1,3 +1,8 @@
+
+<script setup>
+
+
+</script>
 <template>
     <section class="single-page-header">
         <div class="container">
@@ -85,13 +90,13 @@
                 </div>
             </div>
         </div>
-    </section>
+</section>
 
 
 
     <!--
-Start Call To Action
-==================================== -->
+        Start Call To Action
+        ==================================== -->
     <section class="call-to-action-2 section">
         <div class="container">
             <div class="row">
@@ -136,12 +141,12 @@ Start Call To Action
                 </div>
             </div>
         </div>
-    </section>
+</section>
 
 
 
     <!-- Start Our Team
-		=========================================== -->
+        		=========================================== -->
     <section class="team" id="team">
         <div class="container">
             <div class="row">
@@ -257,13 +262,13 @@ Start Call To Action
                 <!-- end team member -->
             </div> <!-- End row -->
         </div> <!-- End container -->
-    </section> <!-- End section -->
+</section> <!-- End section -->
 
 
 
     <!--
-		Start Counter Section
-		==================================== -->
+        		Start Counter Section
+        		==================================== -->
 
     <section class="counter-wrapper section-sm">
         <div class="container">
@@ -326,13 +331,13 @@ Start Call To Action
                 <!-- end fourth count item -->
             </div> <!-- end row -->
         </div> <!-- end container -->
-    </section> <!-- end section -->
+</section> <!-- end section -->
 
 
 
     <!--
-Start Call To Action
-==================================== -->
+        Start Call To Action
+        ==================================== -->
     <section class="call-to-action section">
         <div class="container">
             <div class="row">
@@ -350,7 +355,6 @@ Start Call To Action
 <script>
 export default {
     mounted() {
-
         /* ========================================================================= */
         /*	Company Slider Carousel
         /* =========================================================================  */

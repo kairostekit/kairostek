@@ -42,7 +42,7 @@
 
 <!--
 Start About Section
-                            ==================================== -->
+                                    ==================================== -->
     <section class="service-2 section">
         <div class="container">
             <div class="row">
@@ -104,7 +104,7 @@ Start About Section
 
 <!--
 Start About Section
-                            ==================================== -->
+                                    ==================================== -->
     <section class="about-2 section" id="about">
         <div class="container">
             <div class="row">
@@ -142,7 +142,7 @@ Start About Section
 
 <!--
 Start Call To Action
-                            ==================================== -->
+                                    ==================================== -->
     <section class="call-to-action section">
         <div class="container">
             <div class="row">
@@ -158,7 +158,7 @@ Start Call To Action
 
 <!--
 		Start Counter Section
-                            		==================================== -->
+                                    		==================================== -->
 
     <section class="counter-wrapper section-sm">
         <div class="container">
@@ -224,7 +224,7 @@ Start Call To Action
     </section> <!-- end section -->
 
 <!-- Start Testimonial
-                            =========================================== -->
+                                    =========================================== -->
 
     <section class="testimonial section" id="testimonial">
         <div class="container">
@@ -311,7 +311,7 @@ Start Call To Action
 
 <!--
 		Start Blog Section
-                            		=========================================== -->
+                                    		=========================================== -->
 
     <section class="blog" id="blog">
         <div class="container">
@@ -391,6 +391,8 @@ Start Call To Action
 
 export default {
     mounted() {
+
+
         $('.hero-slider').slick({
             autoplay: true,
             infinite: true,
