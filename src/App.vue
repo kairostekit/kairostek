@@ -1,26 +1,11 @@
 <script setup >
-import AppView from '@/views/AppView.vue';
+// import AppView from '@/views/AppView.vue';
 
 </script>
 
 
 <template>
-    <div id="body ">
-
-        <div id="preloader">
-            <div class='preloader'>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-
-        <AppView />
-
-    </div>
+    <router-view></router-view>
 </template>
 
 
