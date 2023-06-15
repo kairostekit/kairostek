@@ -4,8 +4,6 @@ import FooterLayout from '../components/layouts/FooterLayout.vue';
 import HomeView from './HomeView.vue';
 import { RouterLink, RouterView } from 'vue-router'
 
-
-
 </script>
 
 
