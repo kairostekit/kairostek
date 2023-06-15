@@ -19,7 +19,7 @@ const router = createRouter({
       path: '/',
       component: HomeView,
       meta: {
-        title: 'Home',
+        title: 'Homex',
       },
     },
     {
