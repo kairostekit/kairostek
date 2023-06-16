@@ -31,10 +31,10 @@ import { RouterLink, RouterView } from 'vue-router'
                                     </div>
                                 </li> -->
                         <li class="nav-item ">
-                            <RouterLink to="/dashboard" class="nav-link">Homepage</RouterLink>
+                            <router-link to="dashboard" class="nav-link" >Homepage</router-link>
                         </li>
                         <li class="nav-item ">
-                            <RouterLink to="/dashboard/About" class="nav-link">About Us</RouterLink>
+                            <RouterLink to="dashboard/About" class="nav-link">About Us</RouterLink>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="service.html">Services</a>
@@ -72,6 +72,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <script>
 export default {
+    name: "NavigationLayout",
     mounted() {
 
         /* ========================================================================= */

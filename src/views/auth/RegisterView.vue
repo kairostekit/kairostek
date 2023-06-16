@@ -37,32 +37,32 @@
 
             <div class="content">
 
-                <h2>Sign In</h2>
+                <h2>สมัครสมาชิก</h2>
                 <form action="/dashboard" method="get" class="form">
 
                     <!-- <div class="form"> -->
 
-                        <div class="inputBox">
+                    <div class="inputBox">
 
-                            <input type="text" > <i>Username</i>
+                        <input type="text"> <i>Username</i>
 
-                        </div>
+                    </div>
 
-                        <div class="inputBox">
+                    <div class="inputBox">
 
-                            <input type="password" > <i>Password</i>
+                        <input type="password"> <i>Password</i>
 
-                        </div>
+                    </div>
 
-                        <div class="links"> <a href="#">Forgot Password</a> <a href="/auth/register">Signup</a>
+                    <div class="links"> <a href="#">Forgot Password</a> <a href="/auth/login">Login</a>
 
-                        </div>
+                    </div>
 
-                        <div class="inputBox">
+                    <div class="inputBox">
 
-                            <input type="submit" value="Login">
+                        <input type="submit" value="Register">
 
-                        </div>
+                    </div>
 
                     <!-- </div> -->
                 </form>

@@ -95,8 +95,8 @@
 
 
     <!--
-        Start Call To Action
-        ==================================== -->
+                    Start Call To Action
+                    ==================================== -->
     <section class="call-to-action-2 section">
         <div class="container">
             <div class="row">
@@ -146,7 +146,7 @@
 
 
     <!-- Start Our Team
-        		=========================================== -->
+                    		=========================================== -->
     <section class="team" id="team">
         <div class="container">
             <div class="row">
@@ -267,8 +267,8 @@
 
 
     <!--
-        		Start Counter Section
-        		==================================== -->
+                    		Start Counter Section
+                    		==================================== -->
 
     <section class="counter-wrapper section-sm">
         <div class="container">
@@ -336,8 +336,8 @@
 
 
     <!--
-        Start Call To Action
-        ==================================== -->
+                    Start Call To Action
+                    ==================================== -->
     <section class="call-to-action section">
         <div class="container">
             <div class="row">
@@ -355,6 +355,15 @@
 <script>
 export default {
     mounted() {
+        (function ($) {
+            'use strict';
+            $(window).on('load', function () {
+                $('#preloader').fadeOut('slow', function () {
+                    $(this).remove();
+                });
+            });
+
+        })(jQuery)
         /* ========================================================================= */
         /*	Company Slider Carousel
         /* =========================================================================  */
@@ -366,6 +375,9 @@ export default {
             slidesToShow: 5,
             slidesToScroll: 1
         });
+
+
+
 
     }
 }

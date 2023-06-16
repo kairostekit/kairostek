@@ -1,25 +1,31 @@
 import HomeView from '@/views/pages/HomeView.vue';
 import FullLayout from '@/layouts/full/FullLayout.vue';
+import AboutView from '@/views/pages/AboutView.vue';
 
 
 const DashboardRoutes = {
-    path: '/dashboard',
-    meta: {
-        requiresAuth: true
-    },
+    name: "main",
+    path: '/main',
     component: FullLayout,
-    meta: {
-        title: 'About',
-    },
-    redirect: '/dashboard',
+    // redirect: '/dashboard',
     children: [
         {
+            name: 'dashboard',
             path: '/dashboard',
             component: HomeView,
+            // component: () => import('@/views/pages/HomeView.vue'),
+            meta: {
+                title: 'Dashboard',
+            },
         },
         {
+            name: 'about',
             path: '/dashboard/About',
-            component: HomeView,
+            // component: () => import('@/views/pages/AboutView.vue'),
+            component: AboutView,
+            meta: {
+                title: 'About',
+            },
         }
     ],
 };
