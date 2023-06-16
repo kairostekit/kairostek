@@ -38,33 +38,34 @@
             <div class="content">
 
                 <h2>Sign In</h2>
+                <form action="/dashboard" method="get">
 
-                <div class="form">
+                    <div class="form">
 
-                    <div class="inputBox">
+                        <div class="inputBox">
 
-                        <input type="text" required> <i>Username</i>
+                            <input type="text" > <i>Username</i>
+
+                        </div>
+
+                        <div class="inputBox">
+
+                            <input type="password" > <i>Password</i>
+
+                        </div>
+
+                        <div class="links"> <a href="#">Forgot Password</a> <a href="#">Signup</a>
+
+                        </div>
+
+                        <div class="inputBox">
+
+                            <input type="submit" value="Login">
+
+                        </div>
 
                     </div>
-
-                    <div class="inputBox">
-
-                        <input type="password" required> <i>Password</i>
-
-                    </div>
-
-                    <div class="links"> <a href="#">Forgot Password</a> <a href="#">Signup</a>
-
-                    </div>
-
-                    <div class="inputBox">
-
-                        <input type="submit" value="Login">
-
-                    </div>
-
-                </div>
-
+                </form>
             </div>
 
         </div>
@@ -256,4 +257,5 @@ input[type="submit"]:active {
         width: calc(20vw - 2px);
         height: calc(20vw - 2px);
     }
-}</style>
+}
+</style>

@@ -1,4 +1,4 @@
-<script setup>
+<script setup >
 import { RouterLink, RouterView } from 'vue-router'
 
 </script>
@@ -17,24 +17,24 @@ import { RouterLink, RouterView } from 'vue-router'
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                     aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+            </button>
 
-                <div class="collapse navbar-collapse" id="navigation">
-                    <ul class="navbar-nav ml-auto text-center">
-                        <li class="nav-item dropdown active">
+            <div class="collapse navbar-collapse" id="navigation">
+                <ul class="navbar-nav ml-auto text-center">
+                    <!-- <li class="nav-item dropdown active">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Homepage
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <RouterLink to="/Home" class="dropdown-item">Homepage</RouterLink>
-                                <!-- <a class="dropdown-item" href="index.html">Homepage</a> -->
-                                <a class="dropdown-item" href="onepage-slider.html">Onepage</a>
-                                <a class="dropdown-item" href="onepage-text.html">Onepage 2</a>
-                            </div>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <RouterLink to="/dashboard" class="dropdown-item">Homepage</RouterLink>
+                                    </div>
+                                </li> -->
+                        <li class="nav-item ">
+                            <RouterLink to="/dashboard" class="nav-link">Homepage</RouterLink>
                         </li>
                         <li class="nav-item ">
-                            <RouterLink to="/About" class="nav-link">About Us</RouterLink>
+                            <RouterLink to="/dashboard/About" class="nav-link">About Us</RouterLink>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="service.html">Services</a>

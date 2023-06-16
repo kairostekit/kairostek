@@ -3,7 +3,7 @@ import FullLayout from '@/layouts/full/FullLayout.vue';
 
 
 const DashboardRoutes = {
-    path: '/',
+    path: '/dashboard',
     meta: {
         requiresAuth: true
     },
@@ -15,6 +15,10 @@ const DashboardRoutes = {
     children: [
         {
             path: '/dashboard',
+            component: HomeView,
+        },
+        {
+            path: '/dashboard/About',
             component: HomeView,
         }
     ],
