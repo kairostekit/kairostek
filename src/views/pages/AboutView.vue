@@ -354,6 +354,8 @@
 
 <script>
 export default {
+    name: 'AboutView',
+
     mounted() {
         (function ($) {
             'use strict';

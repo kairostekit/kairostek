@@ -4,14 +4,13 @@ import AboutView from '@/views/pages/AboutView.vue';
 
 
 const DashboardRoutes = {
-    name: "main",
-    path: '/main',
+    path: '/view',
+    name : "view",
     component: FullLayout,
-    // redirect: '/dashboard',
     children: [
         {
-            name: 'dashboard',
-            path: '/dashboard',
+            path: '',
+            name: 'view.dashboard',
             component: HomeView,
             // component: () => import('@/views/pages/HomeView.vue'),
             meta: {
@@ -19,8 +18,8 @@ const DashboardRoutes = {
             },
         },
         {
-            name: 'about',
-            path: '/dashboard/About',
+            name: 'view.about',
+            path: 'about',
             // component: () => import('@/views/pages/AboutView.vue'),
             component: AboutView,
             meta: {

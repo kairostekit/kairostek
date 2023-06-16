@@ -3,29 +3,29 @@ import { createRouter, createWebHistory } from 'vue-router'
 import DashboardRoutes from './DashboardRoutes';
 import AuthRoutes from './AuthRoutes';
 // imp
-    // history: createWebHashHistory(import.meta.env.BASE_URL),
-    // history: createWebHistory(import.meta.env.BASE_URL),
 
-const router = createRouter({
 
-    history: createWebHistory(import.meta.env.BASE_URL),
-    routes: [
-        {
-            path: '/:pathMatch(.*)*',
-            component: () => import('@/views/error/404.vue'),
-            meta: {
-                title: 'Error 404',
+const router = createRouter(
+    {
+        // history: createWebHashHistory(import.meta.env.BASE_URL),
+        history: createWebHistory(import.meta.env.BASE_URL),
+        routes: [
+            {
+                path: '/:pathMatch(.*)*',
+                component: () => import('@/views/error/404.vue'),
+                meta: {
+                    title: 'Error 404',
+                },
             },
-        },
-        DashboardRoutes,
-        AuthRoutes,
-    ]
-});
+            DashboardRoutes,
+            AuthRoutes
+        ]
+    });
 
+// router.beforeEach((to, from,next) => {
+//     document.title = to.meta?.title ?? 'KAIROSTEK'
 
-router.beforeEach((to, from, next) => {
-    document.title = to.meta?.title ?? 'KAIROSTEK'
-    console.log(`Navigating to: ${to.name}`);
-    // next();
-});
+//     // console.log(`Navigating to: ${to.name}`);
+//     next();
+// });
 export default router

@@ -390,6 +390,7 @@ Start Call To Action
 <script>
 
 export default {
+    name: 'HomeView',
     mounted() {
 
 
