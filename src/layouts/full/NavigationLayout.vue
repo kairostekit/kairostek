@@ -25,16 +25,16 @@ import { RouterLink, RouterView } from 'vue-router'
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Homepage
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <RouterLink to="/dashboard" class="dropdown-item">Homepage</RouterLink>
-                                    </div>
-                                </li> -->
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <RouterLink to="/dashboard" class="dropdown-item">Homepage</RouterLink>
+                                        </div>
+                                    </li> -->
                         <li class="nav-item ">
-                            <RouterLink to="/dashboard" class="nav-link">Homepage</RouterLink>
+                            <RouterLink :to="{ name: 'view.dashboard' }" class="nav-link">Homepage</RouterLink>
                         </li>
                         <li class="nav-item ">
-                            <RouterLink to="/dashboard/About" class="nav-link">About Us</RouterLink>
+                            <RouterLink :to="{ name: 'view.about' }" class="nav-link" >About Us</RouterLink>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="service.html">Services</a>
@@ -68,10 +68,15 @@ import { RouterLink, RouterView } from 'vue-router'
             <!-- /main nav -->
         </div>
     </header>
+
+
+
+
 </template>
 
 <script>
 export default {
+    name: "NavigationLayout",
     mounted() {
 
         /* ========================================================================= */

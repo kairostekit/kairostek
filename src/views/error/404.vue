@@ -21,7 +21,7 @@ import { RouterLink, RouterView } from 'vue-router'
                     <h1>404</h1>
                     <h2>Page Not Found</h2>
                     <p>Sorry, but the page you were trying to view does not exist.</p>
-                    <RouterLink to="/Home" class="btn btn-main mt-20">Go Home</RouterLink>
+                    <RouterLink :to="{name : 'view.dashboard'}" class="btn btn-main mt-20">Go Home</RouterLink>
                 </div>
             </div>
         </div>

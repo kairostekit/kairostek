@@ -56,4 +56,11 @@
             <h6>Design and Developed by <a href="">Themefisher</a></h6>
         <h6>Distributed by <a href="https://themewagon.com/">Themewagon</a></h6>
     </div>
-</footer></template>
+</footer>
+</template>
+<script>
+
+export default {
+    name: "FooterLayout",
+}
+</script>
