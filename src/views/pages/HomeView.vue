@@ -1,4 +1,7 @@
+<script setup>
 
+
+</script>
 <template>
     <div class="hero-slider">
         <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-1.jpg);">
@@ -11,7 +14,7 @@
                             amet, consectetur adipisicing elit. Quod, <br> veritatis tempore nostrum id
                             officia quaerat eum corrupti, <br> ipsa aliquam velit.</p>
                         <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main"
-                            href="service.html">Explore Us</a>
+                            href="javascript:void(0)" @click="$e => $router.push({ name: 'view.about' })">Explore Us</a>
                     </div>
                 </div>
             </div>
@@ -30,7 +33,7 @@
                             <br> of Elements & simply put them on our Canvas.
                         </p>
                         <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8" class="btn btn-main"
-                            href="service.html">Explore Us</a>
+                            href="javascript:void(0)" @click="$e => $router.push({ name: 'view.about' })"> Explore Us</a>
                     </div>
                 </div>
             </div>
@@ -40,9 +43,9 @@
 
 
 
-<!--
-Start About Section
-                                    ==================================== -->
+    <!--
+            Start About Section
+                                                    ==================================== -->
     <section class="service-2 section">
         <div class="container">
             <div class="row">
@@ -99,12 +102,12 @@ Start About Section
                     </div>
                 </div>
             </div> <!-- End row -->
-        </div> <!-- End container -->
-    </section> <!-- End section -->
+    </div> <!-- End container -->
+</section> <!-- End section -->
 
-<!--
-Start About Section
-                                    ==================================== -->
+    <!--
+            Start About Section
+                                                    ==================================== -->
     <section class="about-2 section" id="about">
         <div class="container">
             <div class="row">
@@ -137,12 +140,12 @@ Start About Section
                     <a href="#" class="btn btn-main mt-20">Learn More</a>
                 </div>
             </div> <!-- End row -->
-        </div> <!-- End container -->
-    </section> <!-- End section -->
+    </div> <!-- End container -->
+</section> <!-- End section -->
 
-<!--
-Start Call To Action
-                                    ==================================== -->
+    <!--
+            Start Call To Action
+                                                    ==================================== -->
     <section class="call-to-action section">
         <div class="container">
             <div class="row">
@@ -153,12 +156,12 @@ Start Call To Action
                     <a href="" class="btn btn-main">Contact Us</a>
                 </div>
             </div> <!-- End row -->
-        </div> <!-- End container -->
-    </section> <!-- End section -->
+    </div> <!-- End container -->
+</section> <!-- End section -->
 
-<!--
-		Start Counter Section
-                                    		==================================== -->
+    <!--
+            		Start Counter Section
+                                                    		==================================== -->
 
     <section class="counter-wrapper section-sm">
         <div class="container">
@@ -220,11 +223,11 @@ Start Call To Action
                 </div>
                 <!-- end fourth count item -->
             </div> <!-- end row -->
-        </div> <!-- end container -->
+    </div> <!-- end container -->
     </section> <!-- end section -->
 
-<!-- Start Testimonial
-                                    =========================================== -->
+    <!-- Start Testimonial
+                                                    =========================================== -->
 
     <section class="testimonial section" id="testimonial">
         <div class="container">
@@ -306,12 +309,12 @@ Start Call To Action
                     </div>
                 </div> <!-- end col lg 12 -->
             </div> <!-- End row -->
-        </div> <!-- End container -->
-    </section> <!-- End Section -->
+    </div> <!-- End container -->
+</section> <!-- End Section -->
 
-<!--
-		Start Blog Section
-                                    		=========================================== -->
+    <!--
+            		Start Blog Section
+                                                    		=========================================== -->
 
     <section class="blog" id="blog">
         <div class="container">
@@ -391,9 +394,11 @@ Start Call To Action
 
 export default {
     name: 'HomeView',
+    methods: {
+
+    },
     mounted() {
-
-
+        //Hero Slider
         $('.hero-slider').slick({
             autoplay: true,
             infinite: true,
@@ -406,56 +411,14 @@ export default {
             pauseOnHover: false
         });
         $('.hero-slider').slickAnimation();
-
-
-        //Init the slider
         $('.testimonial-slider').slick({
-            infinite: true,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 2000
-        });
+                    infinite: true,
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 2000
+               });
 
 
-        /* ========================================================================= */
-        /*	On scroll fade/bounce effect
-        /* ========================================================================= */
-        var scroll = new SmoothScroll('a[href*="#"]');
-
-        // -----------------------------
-        //  Count Up
-        // -----------------------------
-        function counter() {
-            if ($('.counter').length !== 0) {
-                var oTop = $('.counter').offset().top - window.innerHeight;
-            }
-            if ($(window).scrollTop() > oTop) {
-                $('.counter').each(function () {
-                    var $this = $(this),
-                        countTo = $this.attr('data-count');
-                    $({
-                        countNum: $this.text()
-                    }).animate({
-                        countNum: countTo
-                    }, {
-                        duration: 1000,
-                        easing: 'swing',
-                        step: function () {
-                            $this.text(Math.floor(this.countNum));
-                        },
-                        complete: function () {
-                            $this.text(this.countNum);
-                        }
-                    });
-                });
-            }
-        }
-        // -----------------------------
-        //  On Scroll
-        // -----------------------------
-        $(window).scroll(function () {
-            counter();
-        });
     }
 }
 </script>

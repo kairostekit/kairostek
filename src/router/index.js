@@ -22,10 +22,10 @@ const router = createRouter(
         ]
     });
 
-// router.beforeEach((to, from,next) => {
-//     document.title = to.meta?.title ?? 'KAIROSTEK'
+router.beforeEach((to, from,next) => {
+    document.title = to.meta?.title ?? 'KAIROSTEK'
 
-//     // console.log(`Navigating to: ${to.name}`);
-//     next();
-// });
+    console.log(`Navigating to: ${to.name}`);
+    next();
+});
 export default router

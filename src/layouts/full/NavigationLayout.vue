@@ -1,40 +1,50 @@
 <script setup >
 import { RouterLink, RouterView } from 'vue-router'
-
+$(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    //console.log(scroll);
+    if (scroll > 200) {
+        //console.log('a');
+        $('.navigation').addClass('sticky-header');
+    } else {
+        //console.log('a');
+        $('.navigation').removeClass('sticky-header');
+    }
+});
 </script>
 
 <template>
     <header class="navigation fixed-top">
         <div class="container">
             <!-- main nav -->
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <!-- logo -->
-                <a class="navbar-brand logo" href="index.html">
-                    <img class="logo-default" src="/images/logo.png" alt="logo" />
-                    <img class="logo-white" src="/images/logo-white.png" alt="logo" />
-                </a>
-                <!-- /logo -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <!-- logo -->
+            <a class="navbar-brand logo" href="index.html">
+                <img class="logo-default" src="/images/logo.png" alt="logo" />
+                <img class="logo-white" src="/images/logo-white.png" alt="logo" />
+            </a>
+            <!-- /logo -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                     aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-            </button>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navigation">
-                <ul class="navbar-nav ml-auto text-center">
-                    <!-- <li class="nav-item dropdown active">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Homepage
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <RouterLink to="/dashboard" class="dropdown-item">Homepage</RouterLink>
-                                        </div>
-                                    </li> -->
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul class="navbar-nav ml-auto text-center">
+                        <!-- <li class="nav-item dropdown active">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Homepage
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <RouterLink to="/dashboard" class="dropdown-item">Homepage</RouterLink>
+                                            </div>
+                                        </li> -->
                         <li class="nav-item ">
                             <RouterLink :to="{ name: 'view.dashboard' }" class="nav-link">Homepage</RouterLink>
                         </li>
                         <li class="nav-item ">
-                            <RouterLink :to="{ name: 'view.about' }" class="nav-link" >About Us</RouterLink>
+                            <RouterLink :to="{ name: 'view.about' }" class="nav-link">About Us</RouterLink>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="service.html">Services</a>
@@ -68,10 +78,6 @@ import { RouterLink, RouterView } from 'vue-router'
             <!-- /main nav -->
         </div>
     </header>
-
-
-
-
 </template>
 
 <script>
@@ -83,17 +89,7 @@ export default {
         /*	Header Scroll Background Change
         /* ========================================================================= */
 
-        $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
-            //console.log(scroll);
-            if (scroll > 200) {
-                //console.log('a');
-                $('.navigation').addClass('sticky-header');
-            } else {
-                //console.log('a');
-                $('.navigation').removeClass('sticky-header');
-            }
-        });
+
     }
 }
 </script>

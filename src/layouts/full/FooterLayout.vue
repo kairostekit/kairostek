@@ -62,5 +62,11 @@
 
 export default {
     name: "FooterLayout",
+    methods(){
+
+    },
+    mounted(){
+
+    }
 }
 </script>

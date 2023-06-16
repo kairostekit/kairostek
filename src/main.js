@@ -1,7 +1,16 @@
-import './assets/css/style.css'
+// Add Css Basse
+
+
+
+// import('@/assets/plugins/jquery/jquery.min.js')
+
+
+
+
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+
 
 import App from './App.vue'
 import router from './router'
