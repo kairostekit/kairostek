@@ -1,20 +1,4 @@
 <template>
-    <section class="single-page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav aria-label="breadcrumb  ">
-                        <ol class="breadcrumb bg-transparent a">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Library</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Data</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <section class="about-shot-info section-sm">
         <div class="container">
