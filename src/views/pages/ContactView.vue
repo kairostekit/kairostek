@@ -90,11 +90,11 @@
                         </div>
 
                         <div id="success" class="success">
-                            Thank you. The Mailman is on His Way :)
+                            Thank you. The Mailman is on His Way :
                         </div>
 
                         <div id="error" class="error">
-                            Sorry, don't know what happened. Try later :(
+                            Sorry, don't know what happened. Try later :
                         </div>
                         <div id="cf-submit">
                             <input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
