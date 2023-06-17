@@ -8,6 +8,10 @@ import { RouterView } from 'vue-router';
 
 
 
+import('@/assets/plugins/animate/animate.css')
+import('@/assets/plugins/slick/slick.css')
+import('@/assets/css/style.css')
+
 // import('@/assets/plugins/jquery/jquery.min.js')
 // import('@/assets/plugins/google-map/gmap.js')
 // import('@/assets/plugins/form-validation/jquery.form.js')

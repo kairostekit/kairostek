@@ -1,11 +1,11 @@
 <script setup >
 
-import('@/assets/plugins/bootstrap/css/bootstrap.min.css');
+// import('@/assets/plugins/bootstrap/css/bootstrap.min.css');
 // import('@/assets/plugins/themefisher-font/style.css')
 // import('@/assets/plugins/lightbox2/dist/css/lightbox.min.css')
-import('@/assets/plugins/animate/animate.css')
-import('@/assets/plugins/slick/slick.css')
-import('@/assets/css/style.css')
+// import('@/assets/plugins/animate/animate.css')
+// import('@/assets/plugins/slick/slick.css')
+// import('@/assets/css/style.css')
 
 
 // Add Scripts Basse
@@ -41,3 +41,8 @@ export default {
     }
 }
 </script>
+
+<style>
+
+
+</style>
