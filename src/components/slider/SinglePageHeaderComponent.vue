@@ -5,7 +5,7 @@
                 <div class="col-md-12">
                     <nav aria-label="breadcrumb  ">
                         <ol class="breadcrumb bg-transparent a">
-                            <!-- <li v-for="page in pages" class="breadcrumb-item"><a href="#">{{ pages.name}}</a></li> -->
+                            <li v-for="pages in page" :key="page.name" class="breadcrumb-item"><a href="name">{{ page.name }}</a></li>
 
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item"><a href="#">Library</a></li>
@@ -23,15 +23,8 @@
 export default {
     data() {
         return {
-            page: [
-                {
-                    name: "Home",
-                    link: { name: 'view.dashboard' }
-                },
-                {
-                    name: "Library",
-                    link: { name: 'view.dashboard' }
-                }
+            pages: [
+                1,2,3,4,5,6,7,8,9,10,11
             ]
 
         }

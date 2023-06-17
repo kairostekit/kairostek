@@ -35,45 +35,49 @@
 
                 <!-- Contact Details -->
                 <div class="contact-details col-md-6">
-                    <h3>Contact Details</h3>
+                    <h3>รายละเอียดการติดต่อ</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, vero,
-                        provident, eum eligendi blanditiis ex explicabo vitae nostrum facilis
-                        asperiores dolorem illo officiis ratione vel fugiat dicta laboriosam labore
-                        adipisci.
+                        โดยที่การยอมรับศักดิ์ศรีแต่กำเนิด
+                        และสิทธิที่เท่าเทียมกันและที่ไม่อาจเพิกถอนได้ของสมาชิกทั้งมวลแห่งครอบครัวมนุษยชาติ
+                        เป็นพื้นฐานแห่งอิสรภาพ ความยุติธรรม และสันติภาพในโลก การไม่นำพาและการหมิ่นในคุณค่าของสิทธิมนุษยชน
+                        ยังผลให้มีการกระทำอันป่าเถื่อน ซึ่งเป็นการขัดอย่างร้ายแรงต่อมโนธรรมของมนุษยชาติ
+                        และการมาถึงของโลกที่ได้มีการประกาศให้ความมีอิสรภาพในการพูดและความเชื่อ
+                        และอิสรภาพจากความหวาดกลัวและความต้องการของมนุษย์ เป็นความปรารถนาสูงสุดของประชาชนทั่วไป
                     </p>
                     <ul class="contact-short-info">
                         <li>
                             <i class="tf-ion-ios-home"></i>
-                            <span>Khaja Road, Bayzid, Chittagong, Bangladesh</span>
+                            <span>&nbsp;Khaja Road, Bayzid, Chittagong, Bangladesh</span>
                         </li>
                         <li>
                             <i class="tf-ion-android-phone-portrait"></i>
-                            <span>Phone: +880-31-000-000</span>
+                            <span> Phone: +66 96-163-2545</span>
                         </li>
                         <li>
-                            <i class="tf-ion-android-globe"></i>
-                            <span>Fax: +880-31-000-000</span>
+                            <!-- <i class="tf-ion-android-globe"></i> -->
+                            <!-- <span>Fax: +880-00-000-000</span> -->
                         </li>
                         <li>
                             <i class="tf-ion-android-mail"></i>
-                            <span>Email: hello@meghna.com</span>
+                            <span>Email: singsoft.sw#gmail.com</span>
                         </li>
                     </ul>
                     <!-- Footer Social Links -->
                     <div class="social-icon">
                         <ul>
                             <li>
-                                <a href="#"><i class="tf-ion-social-facebook"></i></a>
+                                <a href="https://www.facebook.com/somphol.wila/"><i class="tf-ion-social-facebook"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="tf-ion-social-twitter"></i></a>
+                                <a href="https://www.facebook.com/somphol.wila/"><i class="tf-ion-social-twitter"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="tf-ion-social-dribbble-outline"></i></a>
+                                <a href="https://www.facebook.com/somphol.wila/"><i
+                                        class="tf-ion-social-dribbble-outline"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="tf-ion-social-linkedin-outline"></i></a>
+                                <a href="https://www.facebook.com/somphol.wila/"><i
+                                        class="tf-ion-social-linkedin-outline"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -123,7 +127,3 @@
 =            Google Map            =
 =================================-->
 </template>
-
-<script>
-export default {};
-</script>

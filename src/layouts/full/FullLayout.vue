@@ -26,6 +26,7 @@ import { RouterView } from 'vue-router';
 
           <!-- <></NavigationLayout> -->
 
+          
           <NavigationLayout></NavigationLayout>
 
           <router-view></router-view>

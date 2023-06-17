@@ -4,6 +4,7 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
+
     <header class="navigation fixed-top">
 
         <div class="container">
@@ -30,8 +31,8 @@ import { RouterLink } from 'vue-router'
 
                             <RouterLink :to="{ name: 'view.service' }" class="nav-link"> OUR SERVIVES </RouterLink>
                         </li>
-                    <li class="nav-item ">
-                        <RouterLink :to="{ name: 'view.about' }" class="nav-link">ABOUT US</RouterLink>
+                        <li class="nav-item ">
+                            <RouterLink :to="{ name: 'view.about' }" class="nav-link">ABOUT US</RouterLink>
                         </li>
 
                         <!-- <li class="nav-item ">

@@ -12,7 +12,10 @@ import { RouterLink } from 'vue-router';
                     <div class="col-sm-3 col-md-3 col-lg-3">
                         <h3>เกี่ยวกับ</h3>
                         <p>
-                            ทั้งอยู่ที่ 115/54 หมู่ 4 ตำบลอนิจา อำเภออังจารัจ จังหวัดอิติมาเต 19008
+                         บริษัท คาริโร โฟกัส โซลูชั่นส์ จำกัด
+                        </p>
+                        <p>
+                         11 หมู่ 6 ตำบลเขิน อำเภอน้ำเกลี้ยง จังหวัดศรีสะเกษ 33130
                         </p>
                     </div>
                     <!-- End of .col-sm-3 -->
@@ -39,7 +42,7 @@ import { RouterLink } from 'vue-router';
                                 <RouterLink tag="button" :to="{ name: 'view.dashboard' }">HOME</RouterLink>
                             </li>
                             <li>
-                                <RouterLink tag="button" :to="{ name: 'view.service' }">OUR SERVIVES</RouterLink>
+                                <RouterLink tag="button" :to="{ name: 'view.service' }">SERVIVES</RouterLink>
                             </li>
                             <li>
                                 <RouterLink tag="button" :to="{ name: 'view.about' }">ABOUT US</RouterLink>
@@ -62,10 +65,10 @@ import { RouterLink } from 'vue-router';
                             <li>
                                 <h3>โซเชียล</h3>
                             </li>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Youtube</a></li>
-                            <li><a href="#">Pinterest</a></li>
+                            <li><a href="https://www.facebook.com/somphol.wila/">Facebook</a></li>
+                            <li><a href="https://www.facebook.com/somphol.wila/">Twitter</a></li>
+                            <li><a href="https://www.facebook.com/somphol.wila/">Youtube</a></li>
+                            <li><a href="https://www.facebook.com/somphol.wila/">Pinterest</a></li>
                         </ul>
                     </div>
                     <!-- End of .col-sm-3 -->
@@ -74,7 +77,7 @@ import { RouterLink } from 'vue-router';
             </div> <!-- end container -->
         </div>
         <div class="footer-bottom">
-            <h5>Copyright {{ CopyrightTime }}. All rights reserved.</h5>
+            <h5>Copyright 2023 - {{ CopyrightTime }}. CARIRO FOCUS SOLUTIONS COMPANY LIMITED. All rights reserved.</h5>
         </div>
     </footer>
 </template>
