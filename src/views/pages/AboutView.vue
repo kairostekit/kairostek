@@ -8,11 +8,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>About Us</h2>
-                    <ol class="breadcrumb header-bradcrumb">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active">About Us</li>
-                    </ol>
+                    <nav aria-label="breadcrumb  ">
+                        <ol class="breadcrumb bg-transparent a">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Library</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -95,8 +97,8 @@
 
 
     <!--
-                                    Start Call To Action
-                                    ==================================== -->
+                                                                        Start Call To Action
+                                                                        ==================================== -->
     <section class="call-to-action-2 section">
         <div class="container">
             <div class="row">
@@ -105,48 +107,12 @@
                         elementum nulla sed justo tempor posuere sit amet sit amet ligula.</h2>
                 </div>
             </div> <!-- End row -->
-        </div> <!-- End container -->
+    </div> <!-- End container -->
     </section> <!-- End section -->
 
 
-
-    <section class="section grallery">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="title text-center">
-                        <h2>Sneak Peak Gallery</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore numquam esse vitae
-                            recusandae qui aspernatur, blanditiis, laboriosam dignissimos dolore facere provident ex?
-                            Porro, praesentium consectetur tempore. Nulla, error eius dolorem.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="company-gallery">
-                        <img src="/images/company/gallery-1.jpg" alt="">
-                        <img src="/images/company/gallery-2.jpg" alt="">
-                        <img src="/images/company/gallery-3.jpg" alt="">
-                        <img src="/images/company/gallery-4.jpg" alt="">
-                        <img src="/images/company/gallery-5.jpg" alt="">
-                        <img src="/images/company/gallery-5.jpg" alt="">
-                        <img src="/images/company/gallery-1.jpg" alt="">
-                        <img src="/images/company/gallery-2.jpg" alt="">
-                        <img src="/images/company/gallery-3.jpg" alt="">
-                        <img src="/images/company/gallery-4.jpg" alt="">
-                        <img src="/images/company/gallery-5.jpg" alt="">
-                        <img src="/images/company/gallery-5.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
-
-
-
     <!-- Start Our Team
-                                    		=========================================== -->
+                                                                        		=========================================== -->
     <section class="team" id="team">
         <div class="container">
             <div class="row">
@@ -267,8 +233,8 @@
 
 
     <!--
-                                    		Start Counter Section
-                                    		==================================== -->
+                                                                        		Start Counter Section
+                                                                        		==================================== -->
 
     <section class="counter-wrapper section-sm">
         <div class="container">
@@ -336,8 +302,8 @@
 
 
     <!--
-                                    Start Call To Action
-                                    ==================================== -->
+                                                                        Start Call To Action
+                                                                        ==================================== -->
     <section class="call-to-action section">
         <div class="container">
             <div class="row">
@@ -356,16 +322,7 @@
 export default {
     name: 'AboutView',
     methods: {
-        getUnits: () => {
-            // $('.company-gallery').slick({
-            //     infinite: true,
-            //     arrows: false,
-            //     autoplay: true,
-            //     autoplaySpeed: 2000,
-            //     slidesToShow: 5,
-            //     slidesToScroll: 1
-            // });
-        }
+
 
 
     },
@@ -373,14 +330,22 @@ export default {
         // this.getUnits()
     },
     mounted() {
-        $('.company-gallery').slick({
-            infinite: true,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            slidesToShow: 5,
-            slidesToScroll: 1
-        });
+        (function ($) {
+            'use strict';
+
+        })(jQuery);
+
+
+        // document.getElementById('preloader').style.display = 'none';
+
+        // $('.company-gallery').slick({
+        //     infinite: true,
+        //     arrows: false,
+        //     autoplay: true,
+        //     autoplaySpeed: 2000,
+        //     slidesToShow: 5,
+        //     slidesToScroll: 1
+        // });
     }
 }
 </script>

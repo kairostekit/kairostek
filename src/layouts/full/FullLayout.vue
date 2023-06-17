@@ -1,33 +1,19 @@
 
 <script setup>
 
-import NavigationLayout from '@/layouts/full/NavigationLayout.vue'
-import FooterLayout from '@/layouts/full/FooterLayout.vue'
+
 import { RouterView } from 'vue-router';
 
 
 
 
-import('@/assets/plugins/animate/animate.css')
-import('@/assets/plugins/slick/slick.css')
-import('@/assets/css/style.css')
 
-// import('@/assets/plugins/jquery/jquery.min.js')
-// import('@/assets/plugins/google-map/gmap.js')
-// import('@/assets/plugins/form-validation/jquery.form.js')
-// import('@/assets/plugins/form-validation/jquery.validate.min.js')
-// import('@/assets/plugins/bootstrap/js/bootstrap.min.js');
-// import('@/assets/plugins/parallax/jquery.parallax-1.1.3.js')
-// import('@/assets/plugins/lightbox2/dist/js/lightbox.min.js')
-// import('@/assets/plugins/slick/slick.min.js')
-// import('@/assets/plugins/filterizr/jquery.filterizr.min.js')
-// import('@/assets/plugins/smooth-scroll/smooth-scroll.min.js')
-
-// import { onVnodeUnmounted } from 'vue';
 </script>
 <template>
-     <!-- <div id="preloader">
-          <div class='preloader'>
+     <div id="body">
+
+          <div id="preloader">
+               <div class='preloader'>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -35,20 +21,45 @@ import('@/assets/css/style.css')
                     <span></span>
                     <span></span>
                </div>
-          </div> -->
+          </div>
 
 
-     <NavigationLayout></NavigationLayout>
+          <!-- <></NavigationLayout> -->
 
-     <RouterView />
+          <NavigationLayout></NavigationLayout>
 
+          <router-view></router-view>
 
-     <FooterLayout></FooterLayout>
+          <FooterLayout></FooterLayout>
+
+     </div>
 </template>
 
 
 <script>
+
+import NavigationLayout from '@/layouts/full/NavigationLayout.vue'
+import FooterLayout from '@/layouts/full/FooterLayout.vue'
+
+import('@/assets/plugins/animate/animate.css')
+import('@/assets/plugins/slick/slick.css')
+import('@/assets/css/style.css')
+
+
 export default {
+     name: "FullLayout",
+     components: {
+          NavigationLayout,
+          FooterLayout
+     },
+     create() {
+          window.addEventListener("load", this.onWindowLoad);
+     },
+     methods: {
+          onWindowLoad() {
+               console.log("window load event");
+          },
+     },
      mounted() {
           (function ($) {
                'use strict';
@@ -58,7 +69,8 @@ export default {
                /* ========================================================================= */
 
                // window.load = function () {
-               // 	document.getElementById('preloader').style.display = 'none';
+               //      document.getElementById('preloader').style.display = 'none';
+               //      alert('Page Preloader');
                // }
 
                $(window).on('load', function () {
@@ -75,17 +87,7 @@ export default {
                /*	Header Scroll Background Change
                /* ========================================================================= */
 
-               $(window).scroll(function () {
-                    var scroll = $(window).scrollTop();
-                    //console.log(scroll);
-                    if (scroll > 200) {
-                         //console.log('a');
-                         $('.navigation').addClass('sticky-header');
-                    } else {
-                         //console.log('a');
-                         $('.navigation').removeClass('sticky-header');
-                    }
-               });
+
 
                /* ========================================================================= */
                /*	Portfolio Filtering Hook
@@ -109,17 +111,6 @@ export default {
                /* ========================================================================= */
                /*	Clients Slider Carousel
                /* =========================================================================  */
-
-               //Init the slider
-               $('.clients-logo-slider').slick({
-                    infinite: true,
-                    arrows: false,
-                    autoplay: true,
-                    autoplaySpeed: 2000,
-                    slidesToShow: 5,
-                    slidesToScroll: 1
-               });
-
 
 
 
