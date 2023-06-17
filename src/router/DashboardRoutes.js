@@ -5,7 +5,8 @@ import AboutView from '@/views/pages/AboutView.vue';
 import AtricleView from '@/views/pages/AtricleView.vue';
 import ClentView from '@/views/pages/ClentView.vue';
 import ContactView from '@/views/pages/ContactView.vue';
-
+import BlogAllView from '@/views/pages/BlogAllView.vue';
+import BlogSingleView from '@/views/pages/BlogSingleView.vue';
 
 const DashboardRoutes = {
     path: '/view',
@@ -16,7 +17,6 @@ const DashboardRoutes = {
             path: '',
             name: 'view.dashboard',
             component: HomeView,
-            // component: () => import('@/views/pages/HomeView.vue'),
             meta: {
                 title: 'Dashboard',
             },
@@ -24,7 +24,6 @@ const DashboardRoutes = {
         {
             name: 'view.service',
             path: 'service',
-            // component: () => import('@/views/pages/AboutView.vue'),
             component: ServiceView,
             meta: {
                 title: 'OUR SERVIVES',
@@ -33,25 +32,36 @@ const DashboardRoutes = {
         {
             name: 'view.about',
             path: 'about',
-            // component: () => import('@/views/pages/AboutView.vue'),
             component: AboutView,
             meta: {
                 title: 'ABOUT US',
             },
         },
         {
-            name: 'view.atricle',
-            path: 'atricle',
-            // component: () => import('@/views/pages/AboutView.vue'),
-            component: AtricleView,
-            meta: {
-                title: 'ATRICLES',
-            },
+            path: 'blog',
+            children: [
+                {
+                    name: 'view.blog',
+                    path: '',
+                    component: BlogAllView,
+                    meta: {
+                        title: 'ATRICLES',
+                    },
+                },
+                {
+                    name: 'view.blog.single',
+                    path: "single",
+                    component: BlogSingleView,
+                    meta: {
+                        title: 'BLOG SINGLE',
+                    },
+                }
+
+            ]
         },
         {
             name: 'view.clent',
             path: 'clent',
-            // component: () => import('@/views/pages/AboutView.vue'),
             component: ClentView,
             meta: {
                 title: 'CLIENTS',
@@ -60,7 +70,6 @@ const DashboardRoutes = {
         {
             name: 'view.contact',
             path: 'contact',
-            // component: () => import('@/views/pages/AboutView.vue'),
             component: ContactView,
             meta: {
                 title: 'CONTACT',

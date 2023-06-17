@@ -5,6 +5,7 @@ import { RouterLink } from 'vue-router'
 
 <template>
     <header class="navigation fixed-top">
+
         <div class="container">
             <!-- main nav -->
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -17,10 +18,10 @@ import { RouterLink } from 'vue-router'
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                     aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-            </button>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navigation">
-                <ul class="navbar-nav ml-auto text-center">
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul class="navbar-nav ml-auto text-center">
 
                         <li class="nav-item ">
                             <RouterLink :to="{ name: 'view.dashboard' }" class="nav-link">HOME</RouterLink>
@@ -29,12 +30,15 @@ import { RouterLink } from 'vue-router'
 
                             <RouterLink :to="{ name: 'view.service' }" class="nav-link"> OUR SERVIVES </RouterLink>
                         </li>
-                        <li class="nav-item ">
-                            <RouterLink :to="{ name: 'view.about' }" class="nav-link">ABOUT US</RouterLink>
+                    <li class="nav-item ">
+                        <RouterLink :to="{ name: 'view.about' }" class="nav-link">ABOUT US</RouterLink>
                         </li>
 
+                        <!-- <li class="nav-item ">
+                                <RouterLink :to="{ name: 'view.atricle' }" class="nav-link">ATRICLES</RouterLink>
+                            </li> -->
                         <li class="nav-item ">
-                            <RouterLink :to="{ name: 'view.atricle' }" class="nav-link">ATRICLES</RouterLink>
+                            <RouterLink :to="{ name: 'view.blog' }" class="nav-link">ATRICLES</RouterLink>
                         </li>
                         <li class="nav-item ">
                             <RouterLink :to="{ name: 'view.clent' }" class="nav-link">CLIENTS</RouterLink>

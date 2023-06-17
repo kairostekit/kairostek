@@ -33,7 +33,8 @@
                             <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
                                 squid. 3 wolf
                                 moon officia aute, non skateboard dolor brunch.</p>
-                            <a class="btn btn-main" href="single-post.html">Read more</a>
+                            <router-link :to="{ name: 'view.blog.single' }" class="btn btn-main">Read more</router-link>
+                            
                         </div>
                     </div>
                 </article>
@@ -51,7 +52,7 @@
                             <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
                                 squid. 3 wolf
                                 moon officia aute, non skateboard dolor brunch.</p>
-                            <a class="btn btn-main" href="single-post.html">Read more</a>
+                             <router-link :to="{ name: 'view.blog.single' }" class="btn btn-main">Read more</router-link>
                         </div>
                     </div>
                 </article>
@@ -69,7 +70,7 @@
                             <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
                                 squid. 3 wolf
                                 moon officia aute, non skateboard dolor brunch.</p>
-                            <a class="btn btn-main" href="single-post.html">Read more</a>
+                             <router-link :to="{ name: 'view.blog.single' }" class="btn btn-main">Read more</router-link>
                         </div>
                     </div>
                 </article>
@@ -86,7 +87,7 @@
                             <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
                                 squid. 3 wolf
                                 moon officia aute, non skateboard dolor brunch.</p>
-                            <a class="btn btn-main" href="single-post.html">Read more</a>
+                             <router-link :to="{ name: 'view.blog.single' }" class="btn btn-main">Read more</router-link>
                         </div>
                     </div>
                 </article>
@@ -104,7 +105,7 @@
                             <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
                                 squid. 3 wolf
                                 moon officia aute, non skateboard dolor brunch.</p>
-                            <a class="btn btn-main" href="single-post.html">Read more</a>
+                             <router-link :to="{ name: 'view.blog.single' }" class="btn btn-main">Read more</router-link>
                         </div>
                     </div>
                 </article>
@@ -122,7 +123,7 @@
                             <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
                                 squid. 3 wolf
                                 moon officia aute, non skateboard dolor brunch.</p>
-                            <a class="btn btn-main" href="single-post.html">Read more</a>
+                             <router-link :to="{ name: 'view.blog.single' }" class="btn btn-main">Read more</router-link>
                         </div>
                     </div>
                 </article>
