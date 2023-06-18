@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
 import Error404View from '@/views/error/404.vue'
 import DashboardRoutes from './DashboardRoutes';
 import AuthRoutes from './AuthRoutes';
@@ -8,8 +8,9 @@ import FullLayout from '@/layouts/full/FullLayout.vue'
 
 const router = createRouter(
     {
-        // history: createWebHashHistory(import.meta.env.BASE_URL),
         history: createWebHistory(import.meta.env.BASE_URL),
+
+        // history: createWebHashHistory(import.meta.env.BASE_URL),
         routes: [
             {
                 path: '/:pathMatch(.*)',
@@ -32,9 +33,7 @@ const router = createRouter(
     });
 
 router.beforeEach((to) => {
-    document.title = to.meta?.title ?? 'KAIROSTEK'
-
-    console.log(`Navigating to: ${to.name}`);
-    // next();
+    // document.title = to.meta?.title +' - '+import.meta.env.VITE_APP_TITLE  ?? import.meta.env.VITE_APP_TITLE
+    // console.log(import.meta.env.VITE_BASE_UREL)/
 });
 export default router

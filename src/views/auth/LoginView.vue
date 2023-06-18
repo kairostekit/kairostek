@@ -38,7 +38,7 @@
             <div class="content">
 
                 <h2>Sign In</h2>
-                <form action="/dashboard" method="get" class="form">
+                <form action="/view/dashboard" method="get" class="form">
 
                     <!-- <div class="form"> -->
 

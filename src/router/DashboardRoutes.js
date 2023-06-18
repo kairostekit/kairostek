@@ -15,6 +15,13 @@ const DashboardRoutes = {
     children: [
         {
             path: '',
+            component: HomeView,
+            meta: {
+                title: 'Dashboard',
+            },
+        },
+        {
+            path: 'dashboard',
             name: 'view.dashboard',
             component: HomeView,
             meta: {
