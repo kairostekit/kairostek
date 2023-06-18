@@ -3,7 +3,6 @@
 
 </script>
 <template>
-
     <hero-slider-component></hero-slider-component>
 
 
@@ -67,8 +66,8 @@
                     </div>
                 </div>
             </div> <!-- End row -->
-    </div> <!-- End container -->
-</section> <!-- End section -->
+        </div> <!-- End container -->
+    </section> <!-- End section -->
 
     <!--
                                             Start About Section
@@ -105,8 +104,8 @@
                     <a href="#" class="btn btn-main mt-20">Learn More</a>
                 </div>
             </div> <!-- End row -->
-    </div> <!-- End container -->
-</section> <!-- End section -->
+        </div> <!-- End container -->
+    </section> <!-- End section -->
 
     <!--
                                             Start Call To Action
@@ -121,8 +120,8 @@
                     <a href="" class="btn btn-main">Contact Us</a>
                 </div>
             </div> <!-- End row -->
-    </div> <!-- End container -->
-</section> <!-- End section -->
+        </div> <!-- End container -->
+    </section> <!-- End section -->
 
     <!--
                                             		Start Counter Section
@@ -188,7 +187,7 @@
                 </div>
                 <!-- end fourth count item -->
             </div> <!-- end row -->
-    </div> <!-- end container -->
+        </div> <!-- end container -->
     </section> <!-- end section -->
 
     <!-- Start Testimonial
@@ -278,50 +277,88 @@ import HeroSliderComponent from '@/components/slider/HeroSliderComponent.vue';
 
 export default {
     name: 'HomeView',
-    components :{
+    components: {
         HeroSliderComponent
     },
     methods: {
 
     },
     mounted() {
-        //Hero Slider
-        //Init the slider
-        // alert('Welcome')
-        $('.hero-slider').slick({
-            autoplay: true,
-            infinite: true,
-            arrows: true,
-            prevArrow: '<button type=\'button\' class=\'prevArrow\'></button>',
-            nextArrow: '<button type=\'button\' class=\'nextArrow\'></button>',
-            dots: false,
-            autoplaySpeed: 7000,
-            pauseOnFocus: false,
-            pauseOnHover: false
-        });
-        $('.hero-slider').slickAnimation();
+        (function ($) {
+            'use strict';
+            $('.hero-slider').slick({
+                autoplay: true,
+                infinite: true,
+                arrows: true,
+                prevArrow: '<button type=\'button\' class=\'prevArrow\'></button>',
+                nextArrow: '<button type=\'button\' class=\'nextArrow\'></button>',
+                dots: false,
+                autoplaySpeed: 7000,
+                pauseOnFocus: false,
+                pauseOnHover: false
+            });
+            $('.hero-slider').slickAnimation();
 
 
-        // $('.testimonial-slider').slick({
-        //     autoplay: true,
-        //     infinite: true,
-        //     arrows: true,
-        //     prevArrow: '<button type=\'button\' class=\'prevArrow\'></button>',
-        //     nextArrow: '<button type=\'button\' class=\'nextArrow\'></button>',
-        //     dots: false,
-        //     autoplaySpeed: 7000,
-        //     pauseOnFocus: false,
-        //     pauseOnHover: false
-        // });
+            // $('.testimonial-slider').slick({
+            //     autoplay: true,
+            //     infinite: true,
+            //     arrows: true,
+            //     prevArrow: '<button type=\'button\' class=\'prevArrow\'></button>',
+            //     nextArrow: '<button type=\'button\' class=\'nextArrow\'></button>',
+            //     dots: false,
+            //     autoplaySpeed: 7000,
+            //     pauseOnFocus: false,
+            //     pauseOnHover: false
+            // });
 
-        $('.testimonial-slider').slick({
-            infinite: true,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 2000
-        });
+            $('.testimonial-slider').slick({
+                infinite: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
 
-        
+            var scroll = new SmoothScroll('a[href*="#"]');
+
+            function counter() {
+                if ($('.counter').length !== 0) {
+                    var oTop = $('.counter').offset().top - window.innerHeight;
+                }
+                if ($(window).scrollTop() > oTop) {
+                    $('.counter').each(function () {
+                        var $this = $(this),
+                            countTo = $this.attr('data-count');
+                        $({
+                            countNum: $this.text()
+                        }).animate({
+                            countNum: countTo
+                        }, {
+                            duration: 1000,
+                            easing: 'swing',
+                            step: function () {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function () {
+                                $this.text(this.countNum);
+                            }
+                        });
+                    });
+                }
+            }
+            // -----------------------------
+            //  On Scroll
+            // -----------------------------
+            $(window).scroll(function () {
+                counter();
+            });
+
+
+
+
+
+
+        })(jQuery);
 
     }
 

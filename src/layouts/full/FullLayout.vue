@@ -42,8 +42,10 @@ import { RouterView } from 'vue-router';
 import NavigationLayout from '@/layouts/full/NavigationLayout.vue'
 import FooterLayout from '@/layouts/full/FooterLayout.vue'
 
-import('@/assets/plugins/animate/animate.css')
-import('@/assets/plugins/slick/slick.css')
+import('@/assets/css/lightbox2/css/lightbox.css')  
+import('@/assets/css/themefisher-font/style.css')  
+import('@/assets/css/animate.css')
+import('@/assets/css/slick.css')
 import('@/assets/css/style.css')
 
 
@@ -65,14 +67,6 @@ export default {
           (function ($) {
                'use strict';
 
-               /* ========================================================================= */
-               /*	Page Preloader
-               /* ========================================================================= */
-
-               // window.load = function () {
-               //      document.getElementById('preloader').style.display = 'none';
-               //      alert('Page Preloader');
-               // }
 
                $(window).on('load', function () {
                     $('#preloader').fadeOut('slow', function () {
@@ -80,21 +74,6 @@ export default {
                     });
                });
 
-
-
-
-
-               /* ========================================================================= */
-               /*	Header Scroll Background Change
-               /* ========================================================================= */
-
-
-
-               /* ========================================================================= */
-               /*	Portfolio Filtering Hook
-               /* =========================================================================  */
-
-               // filter
                setTimeout(function () {
                     var containerEl = document.querySelector('.filtr-container');
                     var filterizd;
@@ -103,23 +82,7 @@ export default {
                     }
                }, 500);
 
-               /* ========================================================================= */
-               /*	Testimonial Carousel
-               /* =========================================================================  */
-
-               //Init the slider
-
-               /* ========================================================================= */
-               /*	Clients Slider Carousel
-               /* =========================================================================  */
-
-
-
-
-
-               /* ========================================================================= */
-               /*   Contact Form Validating
-               /* ========================================================================= */
+             
 
                $('#contact-form').validate({
                     rules: {
@@ -168,45 +131,7 @@ export default {
 
                );
 
-               /* ========================================================================= */
-               /*	On scroll fade/bounce effect
-               /* ========================================================================= */
-               var scroll = new SmoothScroll('a[href*="#"]');
-
-               // -----------------------------
-               //  Count Up
-               // -----------------------------
-               function counter() {
-                    if ($('.counter').length !== 0) {
-                         var oTop = $('.counter').offset().top - window.innerHeight;
-                    }
-                    if ($(window).scrollTop() > oTop) {
-                         $('.counter').each(function () {
-                              var $this = $(this),
-                                   countTo = $this.attr('data-count');
-                              $({
-                                   countNum: $this.text()
-                              }).animate({
-                                   countNum: countTo
-                              }, {
-                                   duration: 1000,
-                                   easing: 'swing',
-                                   step: function () {
-                                        $this.text(Math.floor(this.countNum));
-                                   },
-                                   complete: function () {
-                                        $this.text(this.countNum);
-                                   }
-                              });
-                         });
-                    }
-               }
-               // -----------------------------
-               //  On Scroll
-               // -----------------------------
-               $(window).scroll(function () {
-                    counter();
-               });
+              
 
           })(jQuery);
 
