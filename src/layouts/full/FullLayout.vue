@@ -29,6 +29,8 @@ import { RouterView } from 'vue-router';
 
           <FooterLayout></FooterLayout>
 
+          <button @click="this.topFunction()" id="back_to_top" title="Go to top">Top</button>
+
      </div>
 </template>
 
@@ -60,7 +62,13 @@ export default {
      methods: {
           getData() {
 
-          }
+          },
+          topFunction: () => {
+               document.body.scrollTop = 0;
+               document.documentElement.scrollTop = 0;
+          },
+
+
 
      },
      mounted() {
@@ -78,6 +86,29 @@ export default {
 
           // (function ($) {
           //      'use strict';
+          // Get the button
+
+          // When the user scrolls down 20px from the top of the document, show the button
+          window.onscroll = function () {
+               scrollFunction()
+          };
+
+
+          const scrollFunction = () => {
+               // let back_to_top = this.$refs.back_to_top
+               let back_to_top = document.getElementById("back_to_top");
+               if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    back_to_top.style.display = "block";
+               } else {
+                    back_to_top.style.display = "none";
+               }
+
+               // console.log(back_to_top)
+          }
+
+          // When the user clicks on the button, scroll to the top of the document
+
+
 
 
           $(window).on('load', function () {
@@ -95,3 +126,25 @@ export default {
 }
 </script>
 
+
+<style>
+#back_to_top {
+     display: none;
+     position: fixed;
+     bottom: 20px;
+     right: 30px;
+     z-index: 99;
+     font-size: 18px;
+     border: none;
+     outline: none;
+     background-color: red;
+     color: white;
+     cursor: pointer;
+     padding: 15px;
+     border-radius: 4px;
+}
+
+#back_to_top:hover {
+     background-color: #555;
+}
+</style>
