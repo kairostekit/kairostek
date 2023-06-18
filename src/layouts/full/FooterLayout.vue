@@ -77,7 +77,7 @@ import { RouterLink } from 'vue-router';
             </div> <!-- end container -->
         </div>
         <div class="footer-bottom">
-            <h5>Copyright 2023 - {{ CopyrightTime }}. CARIRO FOCUS SOLUTIONS COMPANY LIMITED. All rights reserved.</h5>
+            <h5>Copyright 2023 - {{ CopyrightTime }}.  All rights reserved.</h5>
         </div>
     </footer>
 </template>
