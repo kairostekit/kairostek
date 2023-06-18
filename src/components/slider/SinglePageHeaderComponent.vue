@@ -2,14 +2,21 @@
     <section class="single-page-header">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <nav aria-label="breadcrumb  ">
+                <div class="col-md-12 ">
+                    <nav aria-label="breadcrumb  align-text-bottom ">
                         <ol class="breadcrumb bg-transparent a">
-                            <li v-for="pages in page" :key="page.name" class="breadcrumb-item"><a href="name">{{ page.name }}</a></li>
 
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Library</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                            <!-- <li class="breadcrumb-item"><a href="#">Library</a></li> -->
+
+                            <li class="breadcrumb-item" v-for="(breadcrumb, key) in breadcrumbs" v-bind:key="key" tag="button">
+                                <router-link v-if="key + 1 < breadcrumbs.length" :to="breadcrumb.url">
+                                    {{ breadcrumb.name }}
+                                </router-link>
+
+                                <span v-show="key + 1 == breadcrumbs.length"  class="text-light">
+                                    {{ breadcrumb.name }}
+                                </span>
+                            </li>
                         </ol>
                     </nav>
                 </div>
@@ -20,15 +27,16 @@
 
 <script>
 
+
+
 export default {
     data() {
         return {
-            pages: [
-                1,2,3,4,5,6,7,8,9,10,11
-            ]
+            
 
         }
-    }
+    },
+    props : ['breadcrumbs']
 
 }
 </script>

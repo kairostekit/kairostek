@@ -4,8 +4,7 @@
 
 </script>
 <template>
-
-    <SinglePageHeaderComponent></SinglePageHeaderComponent>
+    <SinglePageHeaderComponent :breadcrumbs="breadcrumbs"></SinglePageHeaderComponent>
 
 
     <section class="about-shot-info section-sm">
@@ -79,7 +78,7 @@
                 </div>
             </div>
         </div>
-</section>
+    </section>
 
 
 
@@ -94,7 +93,7 @@
                         elementum nulla sed justo tempor posuere sit amet sit amet ligula.</h2>
                 </div>
             </div> <!-- End row -->
-    </div> <!-- End container -->
+        </div> <!-- End container -->
     </section> <!-- End section -->
 
 
@@ -215,7 +214,7 @@
                 <!-- end team member -->
             </div> <!-- End row -->
         </div> <!-- End container -->
-</section> <!-- End section -->
+    </section> <!-- End section -->
 
 
 
@@ -284,7 +283,7 @@
                 <!-- end fourth count item -->
             </div> <!-- end row -->
         </div> <!-- end container -->
-</section> <!-- end section -->
+    </section> <!-- end section -->
 
 
 
@@ -310,8 +309,34 @@ import SinglePageHeaderComponent from '@/components/slider/SinglePageHeaderCompo
 
 export default {
     name: 'AboutView',
-    components : {
+    components: {
         SinglePageHeaderComponent
+    },
+    data() {
+        return {
+
+            breadcrumbs: [
+                {
+                    name: "Home",
+                    url: {
+                        name: 'view.dashboard'
+                    }
+                },
+                {
+                    name: "Atricle",
+                    url: {
+                        name: 'view.blog'
+                    }
+                }
+                ,
+                {
+                    name: "END",
+                    url: {
+                        name: 'view.blog'
+                    }
+                }
+            ]
+        }
     },
     methods: {
 
