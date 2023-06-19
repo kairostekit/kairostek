@@ -76,43 +76,6 @@ export default {
 
      },
      mounted() {
-          // axios({
-          //      method: 'get',
-          //      url: 'https://jsonplaceholder.typicode.com/posts',
-          //      data: {
-          //           title: 'Article title',
-          //           body: 'Article body content',
-          //           userId: 1,
-          //      }
-          // }).then((response) => {
-          //      console.log(response);
-          // })
-
-          // (function ($) {
-          //      'use strict';
-          // Get the button
-
-          // When the user scrolls down 20px from the top of the document, show the button
-          // window.onscroll = function () {
-          //      scrollFunction()
-          // };
-
-
-          // const scrollFunction = () => {
-          //      // let back_to_top = this.$refs.back_to_top
-          //      let back_to_top = document.getElementById("back_to_top");
-          //      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          //           back_to_top.style.display = "block";
-          //      } else {
-          //           back_to_top.style.display = "none";
-          //      }
-
-          //      // console.log(back_to_top)
-          // }
-
-          // When the user clicks on the button, scroll to the top of the document
-
-
 
 
           $(window).on('load', function () {
@@ -178,7 +141,7 @@ export default {
                autoplay: true,
                autoplaySpeed: 2000
           });
-
+          
      }
 
 

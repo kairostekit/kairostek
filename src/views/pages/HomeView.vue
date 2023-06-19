@@ -184,90 +184,6 @@ Start Call To Action
     <!-- Start Team Skills
 		=========================================== -->
 
-    <section class="team-skills section-sm" id="skills">
-        <div class="container">
-            <div class="row">
-
-                <!-- section title -->
-                <div class="col-12">
-                    <div class="title text-center">
-                        <h2>Our Skills</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus fugiat, vel veniam, eos et
-                            delectus eveniet molestiae. Esse, voluptas ratione.</p>
-                        <div class="border"></div>
-                    </div>
-                </div>
-                <!-- /section title -->
-
-                <div class="col-md-5">
-                    <div class="team-skills-content">
-                        <h2>Simple To Start</h2>
-                        <p>Vestibulum nisl tortor, consectetur quis imperdiet bium, letcu. Sedndime ntumiaculis ex, in
-                            faucibus lorem accumsan non. Donec mattis tin unt metuorbi sed tort Igor aman luctus dignissim.
-                            Vestibulum nisl tortor, consectetur quis imperdiet bium, letcu. Sedndime ntumiaculis ex, in
-                            faucibus lorem accumsan non.</p>
-                        <a href="" class="btn btn-main mt-20">Contact Us</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-md-offset-1">
-                    <div class="progress-block">
-                        <ul>
-                            <li>
-                                <span>Photoshop</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 90%;">
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <span>Web Application</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 85%;">
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <span>Andriod Application</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 92%;">
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <span>IOS Development</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 78%;">
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div> <!-- End row -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="clients-slider" class="clients-logo-slider">
-                        <img src="/images/client-logo/logo1.png" alt="">
-                        <img src="/images/client-logo/logo-2.png" alt="">
-                        <img src="/images/client-logo/logo-3.png" alt="">
-                        <img src="/images/client-logo/logo-4.png" alt="">
-                        <img src="/images/client-logo/logo-5.png" alt="">
-                        <img src="/images/client-logo/logo1.png" alt="">
-                        <img src="/images/client-logo/logo-2.png" alt="">
-                        <img src="/images/client-logo/logo-3.png" alt="">
-                        <img src="/images/client-logo/logo-4.png" alt="">
-                        <img src="/images/client-logo/logo-5.png" alt="">
-                    </div>
-
-                </div>
-            </div>
-        </div> <!-- End container -->
-    </section> <!-- End section -->
-    <!--
-		Start Counter Section
-		==================================== -->
-
     <section class="counter-wrapper section-sm">
         <div class="container">
             <div class="row">
@@ -685,90 +601,6 @@ Start Call To Action
     </section> <!-- End section -->
     <!-- Start Testimonial
 =========================================== -->
-
-    <section class="testimonial section" id="testimonial">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- testimonial wrapper -->
-                    <div class="testimonial-slider">
-                        <!-- testimonial single -->
-                        <div class="item text-center">
-                            <i class="tf-ion-chatbubbles"></i>
-                            <!-- client info -->
-                            <div class="client-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos
-                                    earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates
-                                    alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
-                            </div>
-                            <!-- /client info -->
-                            <!-- client photo -->
-                            <div class="client-thumb">
-                                <img src="/images/client-logo/clients-1.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="client-meta">
-                                <h3>William Martin</h3>
-                                <span>CEO , Company Name</span>
-                            </div>
-                            <!-- /client photo -->
-                        </div>
-                        <!-- /testimonial single -->
-
-                        <!-- testimonial single -->
-                        <div class="item text-center">
-                            <i class="tf-ion-chatbubbles"></i>
-                            <!-- client info -->
-                            <div class="client-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos
-                                    earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates
-                                    alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
-                            </div>
-                            <!-- /client info -->
-                            <!-- client photo -->
-                            <div class="client-thumb">
-                                <img src="/images/client-logo/clients-2.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="client-meta">
-                                <h3>Emma Harrison</h3>
-                                <span>CEO , Company Name</span>
-                            </div>
-                            <!-- /client photo -->
-                        </div>
-                        <!-- /testimonial single -->
-
-                        <!-- testimonial single -->
-                        <div class="item text-center">
-                            <i class="tf-ion-chatbubbles"></i>
-                            <!-- client info -->
-                            <div class="client-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos
-                                    earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates
-                                    alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
-                            </div>
-                            <!-- /client info -->
-                            <!-- client photo -->
-                            <div class="client-thumb">
-                                <img src="/images/client-logo/clients-3.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="client-meta">
-                                <h3>Alexander Lucas</h3>
-                                <span>CEO , Company Name</span>
-                            </div>
-                            <!-- /client photo -->
-                        </div>
-                        <!-- /testimonial single -->
-                    </div>
-                </div> <!-- end col lg 12 -->
-            </div> <!-- End row -->
-        </div> <!-- End container -->
-    </section> <!-- End Section -->
-    <!--
-		Start Blog Section
-		=========================================== -->
-
     <section class="blog" id="blog">
         <div class="container">
             <div class="row">
@@ -776,7 +608,7 @@ Start Call To Action
                 <!-- section title -->
                 <div class="col-12">
                     <div class="title text-center ">
-                        <h2> Latest <span class="color">Posts</span></h2>
+                        <h2> โพสต์ <span class="color">ล่าสุด</span></h2>
                         <div class="border"></div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus facere accusamus, reprehenderit
                             libero
@@ -863,21 +695,53 @@ export default {
     mounted() {
 
 
+        $('.company-gallery').slick({
+            infinite: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToShow: 5,
+            slidesToScroll: 1
+        });
 
 
-            // $('.testimonial-slider').slick({
-            //     autoplay: true,
-            //     infinite: true,
-            //     arrows: true,
-            //     prevArrow: '<button type=\'button\' class=\'prevArrow\'></button>',
-            //     nextArrow: '<button type=\'button\' class=\'nextArrow\'></button>',
-            //     dots: false,
-            //     autoplaySpeed: 7000,
-            //     pauseOnFocus: false,
-            //     pauseOnHover: false
-            // });
+        // $('.clients-logo-slider').slick({
+        //     infinite: true,
+        //     arrows: false,
+        //     autoplay: true,
+        //     autoplaySpeed: 2000,
+        //     slidesToShow: 5,
+        //     slidesToScroll: 1
+        // });
 
-            
+        /* ========================================================================= */
+        /*	Testimonial Carousel
+        /* =========================================================================  */
+
+        //Init the slider
+        $('.testimonial-slider').slick({
+            infinite: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000
+        });
+
+
+        setTimeout(function () {
+            var containerEl = document.querySelector('.filtr-container');
+            var filterizd;
+            if (containerEl) {
+                filterizd = $('.filtr-container').filterizr({});
+            }
+        }, 500);
+
+
+        /* ========================================================================= */
+        /*	Clients Slider Carousel
+        /* =========================================================================  */
+
+        //Init the slider
+
 
     }
 

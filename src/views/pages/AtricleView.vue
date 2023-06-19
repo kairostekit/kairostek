@@ -20,6 +20,7 @@
     <section class="posts section">
         <div class="container">
             <div class="row">
+            
                 <!-- /section title -->
                 <!-- single blog post -->
                 <article class="col-md-4 col-sm-6 col-xs-12 clearfix ">
