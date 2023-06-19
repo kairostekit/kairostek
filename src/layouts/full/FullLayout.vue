@@ -138,7 +138,50 @@ export default {
 
 
 
+          var scroll = new SmoothScroll('a[href*="#"]');
+
+          function counter() {
+               if ($('.counter').length !== 0) {
+                    var oTop = $('.counter').offset().top - window.innerHeight;
+               }
+               if ($(window).scrollTop() > oTop) {
+                    $('.counter').each(function () {
+                         var $this = $(this),
+                              countTo = $this.attr('data-count');
+                         $({
+                              countNum: $this.text()
+                         }).animate({
+                              countNum: countTo
+                         }, {
+                              duration: 1000,
+                              easing: 'swing',
+                              step: function () {
+                                   $this.text(Math.floor(this.countNum));
+                              },
+                              complete: function () {
+                                   $this.text(this.countNum);
+                              }
+                         });
+                    });
+               }
+          }
+          // -----------------------------
+          //  On Scroll
+          // -----------------------------
+          $(window).scroll(function () {
+               counter();
+          });
+
+          $('.testimonial-slider').slick({
+               infinite: true,
+               arrows: false,
+               autoplay: true,
+               autoplaySpeed: 2000
+          });
+
      }
+
+
 }
 </script>
 
