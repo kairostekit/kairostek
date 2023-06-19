@@ -352,6 +352,13 @@ export default {
 
         })(jQuery);
 
+        $('.testimonial-slider').slick({
+            infinite: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000
+        });
+
 
         // document.getElementById('preloader').style.display = 'none';
 

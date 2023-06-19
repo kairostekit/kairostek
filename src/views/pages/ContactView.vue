@@ -1,32 +1,16 @@
 <template>
-    <section class="single-page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav aria-label="breadcrumb  ">
-                        <ol class="breadcrumb bg-transparent a">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Library</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Data</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- <SinglePageHeaderComponent :breadcrumbs="breadcrumbs"></SinglePageHeaderComponent> -->
 
     <!--Start Contact Us
 	=========================================== -->
-    <section class="contact-us" id="contact">
+    <section class="contact-us bg-light" id="contact">
         <div class="container">
-            <div class="row">
+            <div class="row ">
                 <!-- section title -->
                 <div class="col-12">
                     <div class="title text-center">
-                        <h2>Get In Touch</h2>
+                        <h2>ได้รับการติดต่อ</h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis
-                            eveniet maiores ab maxime nam ut numquam molestiae quaerat incidunt?
                         </p>
                         <div class="border"></div>
                     </div>
@@ -34,7 +18,7 @@
                 <!-- /section title -->
 
                 <!-- Contact Details -->
-                <div class="contact-details col-md-6">
+                <div class="contact-details col-md-6 ">
                     <h3>รายละเอียดการติดต่อ</h3>
                     <p>
                         โดยที่การยอมรับศักดิ์ศรีแต่กำเนิด
@@ -47,7 +31,7 @@
                     <ul class="contact-short-info">
                         <li>
                             <i class="tf-ion-ios-home"></i>
-                            <span>&nbsp;Khaja Road, Bayzid, Chittagong, Bangladesh</span>
+                            <span>&nbsp; Khaja Road, Bayzid, Chittagong, Bangladesh</span>
                         </li>
                         <li>
                             <i class="tf-ion-android-phone-portrait"></i>
@@ -89,19 +73,19 @@
                 <div class="contact-form col-md-6">
                     <form id="contact-form" method="post" role="form">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" class="form-control" name="name" id="name" />
+                            <input type="text" placeholder="ชื่อ - นามสกุล" class="form-control" name="name" id="name" />
                         </div>
 
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" class="form-control" name="email" id="email" />
+                            <input type="email" placeholder="อีเมล" class="form-control" name="email" id="email" />
                         </div>
 
                         <div class="form-group">
-                            <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject" />
+                            <input type="text" placeholder="เรื่อง" class="form-control" name="subject" id="subject" />
                         </div>
 
                         <div class="form-group">
-                            <textarea rows="6" placeholder="Message" class="form-control" name="message"
+                            <textarea rows="6" placeholder="ข้อความรายละเอียด" class="form-control" name="message"
                                 id="message"></textarea>
                         </div>
 
@@ -115,11 +99,22 @@
                         </div>
                     </form>
                 </div>
+
+                <div class="col-md-12">
+                    <div class="google-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d15879.86092189619!2d104.59929402436781!3d14.82361683766531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTTCsDQ5JzExLjQiTiAxMDTCsDM2JzA0LjYiRQ!5e0!3m2!1sth!2sth!4v1687180818038!5m2!1sth!2sth"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
                 <!-- ./End Contact Form -->
             </div>
             <!-- end row -->
         </div>
         <!-- end container -->
+
+
     </section>
     <!-- end section -->
 
@@ -127,3 +122,107 @@
 =            Google Map            =
 =================================-->
 </template>
+
+<script>
+
+import SinglePageHeaderComponent from '@/components/slider/SinglePageHeaderComponent.vue'
+export default {
+
+
+
+    name: "ContactView",
+    components: {
+        SinglePageHeaderComponent
+    }, data() {
+        return {
+
+            breadcrumbs: [
+                {
+                    name: "Home",
+                    url: {
+                        name: 'view.dashboard'
+                    }
+                },
+                {
+                    name: "Atricle",
+                    url: {
+                        name: 'view.blog'
+                    }
+                }
+                ,
+                {
+                    name: "END",
+                    url: {
+                        name: 'view.blog'
+                    }
+                }
+            ]
+        }
+    },
+    mounted() {
+        $('#contact-form').validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 4
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                subject: {
+                    required: false
+                },
+                message: {
+                    required: true
+                }
+            },
+            messages: {
+                user_name: {
+                    required: 'Come on, you have a name don\'t you?',
+                    minlength: 'Your name must consist of at least 2 characters'
+                },
+                email: {
+                    required: 'Please put your email address'
+                },
+                message: {
+                    required: 'Put some messages here?',
+                    minlength: 'Your name must consist of at least 2 characters'
+                }
+            },
+            submitHandler: function (form) {
+                $(form).ajaxSubmit({
+                    type: 'POST',
+                    data: $(form).serialize(),
+                    url: 'sendmail.php',
+                    success: function () {
+                        $('#contact-form #success').fadeIn();
+                    },
+                    error: function () {
+                        $('#contact-form #error').fadeIn();
+                    }
+                });
+            }
+        }
+
+        );
+    }
+}
+
+</script>
+
+
+<style scoped>
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+</style>

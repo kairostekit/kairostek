@@ -7,109 +7,168 @@
 
 
 
-    <!--
-                                            Start About Section
-                                                                                    ==================================== -->
-    <section class="service-2 section">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-12">
-                    <!-- section title -->
-                    <div class="title text-center">
-                        <h2>What Do We Offer</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet,
-                            consectetur
-                            adipisicing elit. Voluptates, earum. </p>
-                        <div class="border"></div>
-                    </div>
-                    <!-- /section title -->
-                </div>
-
-                <div class="col-md-4 text-center">
-                    <img src="/images/about/member.jpg" class="inline-block" alt="">
-                </div>
-                <div class="col-md-8">
-                    <div class="row text-center">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="service-item">
-                                <i class="tf-ion-ios-alarm-outline"></i>
-                                <h4>Time Management</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui
-                                    venenatis.</p>
-                            </div>
-                        </div><!-- END COL -->
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="service-item">
-                                <i class="tf-ion-ios-briefcase-outline"></i>
-                                <h4>Marketing Ideas</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui
-                                    venenatis.</p>
-                            </div>
-                        </div><!-- END COL -->
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="service-item">
-                                <i class="tf-ion-ios-email-outline"></i>
-                                <h4>Mail Support</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui
-                                    venenatis.</p>
-                            </div>
-                        </div><!-- END COL -->
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="service-item">
-                                <i class="tf-ion-ios-locked-outline"></i>
-                                <h4>Secure System</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui
-                                    venenatis.</p>
-                            </div>
-                        </div><!-- END COL -->
-                    </div>
-                </div>
-            </div> <!-- End row -->
-        </div> <!-- End container -->
-    </section> <!-- End section -->
 
     <!--
-                                            Start About Section
-                                                                                    ==================================== -->
-    <section class="about-2 section" id="about">
+Start About Section
+==================================== -->
+    <section class="about" id="about">
         <div class="container">
             <div class="row">
 
                 <!-- section title -->
-                <div class="col-12">
-                    <div class="title text-center">
-                        <h2>We Are Bingo Agency</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam reprehenderit accusamus
-                            labore iusto,
-                            aut, eum itaque illo totam tempora eius.</p>
-                        <div class="border"></div>
-                    </div>
+                <div class="title text-center">
+                    <h2>About Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa placeat voluptas tempore recusandae
+                        quasi nesciunt in, facilis animi. Sint, possimus?</p>
+                    <div class="border"></div>
                 </div>
                 <!-- /section title -->
 
                 <div class="col-md-6">
-                    <img src="/images/about/about-2.png" class="img-fluid" alt="">
+                    <img src="/images/about-us.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-6">
-                    <ul class="checklist">
-                        <li>Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem laca quam venenatis
-                            vestibulum.</li>
-                        <li>Aenean quam. Pellentesque ornare sem laca quam venenatis vestibulum.</li>
-                        <li>Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem laca quam venenatis
-                            vestibulum.</li>
-                        <li>Etiam porta sem multipage evint landing magna mollis euismod a pharetra augue.</li>
-                        <li>Aenean quam. Pellentesque ornare sem laca quam venenatis vestibulum.</li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a tempor eros. Pellentesque elementum
+                        nulla sed justo tempor posuere sit amet sit amet ligula. Curabitur felis nibh, imperdiet eu erat
+                        non, luctus cursus lectus. Donec maximus diam leo, sed fringilla nisl auctor eget. Donec dictum
+                        neque est, ac faucibus ex blandit a.</p>
+                    <p>Curabitur felis nibh, imperdiet eu erat non, luctus cursus lectus. Donec maximus diam leo, sed
+                        fringilla nisl auctor eget. Donec dictum neque est, ac faucibus ex blandit a</p>
+                    <h4>Lorem ipsum dolor sit.</h4>
+                    <ul class="feature-list">
+                        <li> <i class="tf-ion-android-checkmark-circle"></i> Web Development</li>
+                        <li> <i class="tf-ion-android-checkmark-circle"></i> Application Development</li>
+                        <li> <i class="tf-ion-android-checkmark-circle"></i> Website Design</li>
+                        <li> <i class="tf-ion-android-checkmark-circle"></i> UI/UX Design</li>
+                        <li> <i class="tf-ion-android-checkmark-circle"></i> SEO Service</li>
                     </ul>
                     <a href="#" class="btn btn-main mt-20">Learn More</a>
                 </div>
             </div> <!-- End row -->
         </div> <!-- End container -->
     </section> <!-- End section -->
-
     <!--
-                                            Start Call To Action
-                                                                                    ==================================== -->
+Start Call To Action
+==================================== -->
+    <section class="call-to-action-2 section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a tempor eros. Pellentesque elementum
+                        nulla sed justo tempor posuere sit amet sit amet ligula.</h2>
+                </div>
+            </div> <!-- End row -->
+        </div> <!-- End container -->
+    </section> <!-- End section -->
+    <!-- Start Services Section
+		==================================== -->
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="row no-gutters">
+                <!-- section title -->
+                <div class="col-12">
+                    <div class="title text-center">
+                        <h2>Our Services</h2>
+                        <p>Vestibulum nisl tortor, consectetur quis imperdiet bibendum, laoreet sed arcu. Sed condimentum
+                            iaculis ex,
+                            in faucibus lorem accumsan non. Donec mattis tincidunt metus. Morbi sed tortor a risus luctus
+                            dignissim.</p>
+                        <div class="border"></div>
+                    </div>
+                </div>
+                <!-- /section title -->
+
+                <!-- Single Service Item -->
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <div class="service-block p-4 color-bg text-center">
+                        <div class="service-icon text-center">
+                            <i class="tf-ion-ios-copy-outline"></i>
+                        </div>
+                        <h3>WordPress Theme</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus.
+                            Nullam
+                            iaculis arcu at mauris dapibus consectetur.</p>
+                    </div>
+                </div>
+                <!-- End Single Service Item -->
+
+                <!-- Single Service Item -->
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <div class="service-block p-4 text-center">
+                        <div class="service-icon text-center">
+                            <i class="tf-ion-ios-alarm-outline"></i>
+                        </div>
+                        <h3>Responsive Design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus.
+                            Nullam
+                            iaculis arcu at mauris dapibus consectetur.</p>
+                    </div>
+                </div>
+                <!-- End Single Service Item -->
+
+                <!-- Single Service Item -->
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <div class="service-block p-4 color-bg text-center">
+                        <div class="service-icon text-center">
+                            <i class="tf-ion-ios-book-outline"></i>
+                        </div>
+                        <h3>Media &amp; Advertisement</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus.
+                            Nullam
+                            iaculis arcu at mauris dapibus consectetur.</p>
+                    </div>
+                </div>
+                <!-- End Single Service Item -->
+
+                <!-- Single Service Item -->
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <div class="service-block p-4  text-center">
+                        <div class="service-icon text-center">
+                            <i class="tf-ion-ios-briefcase-outline"></i>
+                        </div>
+                        <h3>Graphic Design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus.
+                            Nullam
+                            iaculis arcu at mauris dapibus consectetur.</p>
+                    </div>
+                </div>
+                <!-- End Single Service Item -->
+
+                <!-- Single Service Item -->
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <div class="service-block p-4 color-bg text-center">
+                        <div class="service-icon text-center">
+                            <i class="tf-ion-ios-crop"></i>
+                        </div>
+                        <h3>Apps Development</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus.
+                            Nullam
+                            iaculis arcu at mauris dapibus consectetur.</p>
+                    </div>
+                </div>
+                <!-- End Single Service Item -->
+
+                <!-- Single Service Item -->
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <div class="service-block p-4 text-center">
+                        <div class="service-icon text-center">
+                            <i class="tf-ion-ios-home-outline"></i>
+                        </div>
+                        <h3>Networking</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus.
+                            Nullam
+                            iaculis arcu at mauris dapibus consectetur.</p>
+                    </div>
+                </div>
+                <!-- End Single Service Item -->
+
+            </div> <!-- End row -->
+        </div> <!-- End container -->
+    </section> <!-- End section -->
+    <!--
+Start Call To Action
+==================================== -->
     <section class="call-to-action section">
         <div class="container">
             <div class="row">
@@ -122,10 +181,92 @@
             </div> <!-- End row -->
         </div> <!-- End container -->
     </section> <!-- End section -->
+    <!-- Start Team Skills
+		=========================================== -->
 
+    <section class="team-skills section-sm" id="skills">
+        <div class="container">
+            <div class="row">
+
+                <!-- section title -->
+                <div class="col-12">
+                    <div class="title text-center">
+                        <h2>Our Skills</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus fugiat, vel veniam, eos et
+                            delectus eveniet molestiae. Esse, voluptas ratione.</p>
+                        <div class="border"></div>
+                    </div>
+                </div>
+                <!-- /section title -->
+
+                <div class="col-md-5">
+                    <div class="team-skills-content">
+                        <h2>Simple To Start</h2>
+                        <p>Vestibulum nisl tortor, consectetur quis imperdiet bium, letcu. Sedndime ntumiaculis ex, in
+                            faucibus lorem accumsan non. Donec mattis tin unt metuorbi sed tort Igor aman luctus dignissim.
+                            Vestibulum nisl tortor, consectetur quis imperdiet bium, letcu. Sedndime ntumiaculis ex, in
+                            faucibus lorem accumsan non.</p>
+                        <a href="" class="btn btn-main mt-20">Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-offset-1">
+                    <div class="progress-block">
+                        <ul>
+                            <li>
+                                <span>Photoshop</span>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 90%;">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Web Application</span>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 85%;">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Andriod Application</span>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 92%;">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <span>IOS Development</span>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 78%;">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div> <!-- End row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="clients-slider" class="clients-logo-slider">
+                        <img src="/images/client-logo/logo1.png" alt="">
+                        <img src="/images/client-logo/logo-2.png" alt="">
+                        <img src="/images/client-logo/logo-3.png" alt="">
+                        <img src="/images/client-logo/logo-4.png" alt="">
+                        <img src="/images/client-logo/logo-5.png" alt="">
+                        <img src="/images/client-logo/logo1.png" alt="">
+                        <img src="/images/client-logo/logo-2.png" alt="">
+                        <img src="/images/client-logo/logo-3.png" alt="">
+                        <img src="/images/client-logo/logo-4.png" alt="">
+                        <img src="/images/client-logo/logo-5.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div> <!-- End container -->
+    </section> <!-- End section -->
     <!--
-                                            		Start Counter Section
-                                                                                    		==================================== -->
+		Start Counter Section
+		==================================== -->
 
     <section class="counter-wrapper section-sm">
         <div class="container">
@@ -133,9 +274,9 @@
                 <div class="col-md-12 text-center">
                     <div class="title">
                         <h2>Award-Winning Agency</h2>
-                        <p>Vestibulum nisl tortor, consectetur quis imperdiet bibendum, laoreet sed arcu. Sed
-                            condimentum iaculis ex, in faucibus lorem accumsan non. Donec mattis tincidunt metus. Morbi
-                            sed tortor a risus luctus dignissim.</p>
+                        <p>Vestibulum nisl tortor, consectetur quis imperdiet bibendum, laoreet sed arcu. Sed condimentum
+                            iaculis ex, in faucibus lorem accumsan non. Donec mattis tincidunt metus. Morbi sed tortor a
+                            risus luctus dignissim.</p>
                     </div>
                 </div>
                 <!-- first count item -->
@@ -189,13 +330,444 @@
             </div> <!-- end row -->
         </div> <!-- end container -->
     </section> <!-- end section -->
+    <!-- Start Portfolio Section
+		=========================================== -->
 
+    <section class="portfolio section-sm" id="portfolio">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-lg-12">
+
+                    <!-- section title -->
+                    <div class="title text-center">
+                        <h2>Our Works</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, veritatis. Lorem ipsum dolor sit
+                            amet,
+                            consectetur adipisicing elit. Minima, vitae? </p>
+                        <div class="border"></div>
+                    </div>
+                    <!-- /section title -->
+
+                    <div class="portfolio-filter">
+                        <button type="button" data-filter="all">All</button>
+                        <button type="button" data-filter="photography">Photography</button>
+                        <button type="button" data-filter="ios">IOS App</button>
+                        <button type="button" data-filter="development">Development</button>
+                        <button type="button" data-filter="design">Design</button>
+                    </div>
+
+                    <div class="row filtr-container">
+                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
+                            <div class="portfolio-block">
+                                <img class="img-fluid" src="/images/portfolio/portfolio-1.jpg" alt="">
+                                <div class="caption">
+                                    <a class="search-icon" href="/images/portfolio/portfolio-1.jpg" data-lightbox="image-1">
+                                        <i class="tf-ion-ios-search-strong"></i>
+                                    </a>
+                                    <h4><a href="">AirBnB Postcard</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, ios">
+                            <div class="portfolio-block">
+                                <img class="img-fluid" src="/images/portfolio/portfolio-2.jpg" alt="">
+                                <div class="caption">
+                                    <a class="search-icon" href="/images/portfolio/portfolio-2.jpg" data-lightbox="image-1">
+                                        <i class="tf-ion-ios-search-strong"></i>
+                                    </a>
+                                    <h4><a href="">AirBnB Postcard</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography, development">
+                            <div class="portfolio-block">
+                                <img class="img-fluid" src="/images/portfolio/portfolio-3.jpg" alt="">
+                                <div class="caption">
+                                    <a class="search-icon" href="/images/portfolio/portfolio-3.jpg" data-lightbox="image-1">
+                                        <i class="tf-ion-ios-search-strong"></i>
+                                    </a>
+                                    <h4><a href="">AirBnB Postcard</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography, ios">
+                            <div class="portfolio-block">
+                                <img class="img-fluid" src="/images/portfolio/portfolio-4.jpg" alt="">
+                                <div class="caption">
+                                    <a class="search-icon" href="/images/portfolio/portfolio-4.jpg" data-lightbox="image-1">
+                                        <i class="tf-ion-ios-search-strong"></i>
+                                    </a>
+                                    <h4><a href="">AirBnB Postcard</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
+                            <div class="portfolio-block">
+                                <img class="img-fluid" src="/images/portfolio/portfolio-5.jpg" alt="">
+                                <div class="caption">
+                                    <a class="search-icon" href="/images/portfolio/portfolio-5.jpg" data-lightbox="image-1">
+                                        <i class="tf-ion-ios-search-strong"></i>
+                                    </a>
+                                    <h4><a href="">AirBnB Postcard</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, development">
+                            <div class="portfolio-block">
+                                <img class="img-fluid" src="/images/portfolio/portfolio-6.jpg" alt="">
+                                <div class="caption">
+                                    <a class="search-icon" href="/images/portfolio/portfolio-6.jpg" data-lightbox="image-1">
+                                        <i class="tf-ion-ios-search-strong"></i>
+                                    </a>
+                                    <h4><a href="">AirBnB Postcard</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography">
+                            <div class="portfolio-block">
+                                <img class="img-fluid" src="/images/portfolio/portfolio-7.jpg" alt="">
+                                <div class="caption">
+                                    <a class="search-icon" href="/images/portfolio/portfolio-7.jpg" data-lightbox="image-1">
+                                        <i class="tf-ion-ios-search-strong"></i>
+                                    </a>
+                                    <h4><a href="">AirBnB Postcard</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, development">
+                            <div class="portfolio-block">
+                                <img class="img-fluid" src="/images/portfolio/portfolio-1.jpg" alt="">
+                                <div class="caption">
+                                    <a class="search-icon" href="/images/portfolio/portfolio-1.jpg" data-lightbox="image-1">
+                                        <i class="tf-ion-ios-search-strong"></i>
+                                    </a>
+                                    <h4><a href="">AirBnB Postcard</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /end col-lg-12 -->
+            </div> <!-- end row -->
+        </div> <!-- end container -->
+    </section> <!-- End section -->
+    <!-- Start Our Team
+		=========================================== -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="row">
+
+                <!-- section title -->
+                <div class="col-12">
+                    <div class="title text-center ">
+                        <h2>Our Team</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quasi tempora obcaecati,
+                            quis
+                            similique quos.</p>
+                        <div class="border"></div>
+                    </div>
+                </div>
+                <!-- /section title -->
+
+                <!-- team member -->
+                <div class="col-md-4 col-sm-6 ">
+                    <div class="team-member text-center">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-fluid" src="/images/team/member-1.jpg" alt="Meghna">
+                            <!-- /member photo -->
+
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+                                    <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+                                    <li><a href="#"><i class="tf-ion-social-google-outline"></i></a></li>
+                                    <li><a href="#"><i class="tf-ion-social-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- /member social profile -->
+                        </div>
+
+                        <!-- member name & designation -->
+                        <div class="member-content">
+                            <h3>Michael Jonson</h3>
+                            <span>Head Of Marketing</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam,
+                                culpa odio.</p>
+                        </div>
+                        <!-- /member name & designation -->
+
+                    </div>
+                </div>
+                <!-- end team member -->
+
+                <!-- team member -->
+                <div class="col-md-4 col-sm-6 ">
+                    <div class="team-member text-center">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-fluid" src="/images/team/member-2.jpg" alt="Meghna">
+                            <!-- /member photo -->
+
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+                                    <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+                                    <li><a href="#"><i class="tf-ion-social-google-outline"></i></a></li>
+                                    <li><a href="#"><i class="tf-ion-social-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- /member social profile -->
+                        </div>
+
+                        <!-- member name & designation -->
+                        <div class="member-content">
+                            <h3>Carrick Mollenkamp</h3>
+                            <span>Web Developer</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam,
+                                culpa odio.</p>
+                        </div>
+                        <!-- /member name & designation -->
+                    </div>
+                </div>
+                <!-- end team member -->
+
+                <!-- team member -->
+                <div class="col-md-4 col-sm-6 ">
+                    <div class="team-member text-center">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-fluid" src="/images/team/member-3.jpg" alt="Meghna">
+                            <!-- /member photo -->
+
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+                                    <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+                                    <li><a href="#"><i class="tf-ion-social-google-outline"></i></a></li>
+                                    <li><a href="#"><i class="tf-ion-social-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- /member social profile -->
+                        </div>
+
+                        <!-- member name & designation -->
+                        <div class="member-content">
+                            <h3>David Gauthier</h3>
+                            <span>Head Of Management</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam,
+                                culpa odio.</p>
+                        </div>
+                        <!-- /member name & designation -->
+
+                    </div>
+                </div>
+                <!-- end team member -->
+            </div> <!-- End row -->
+        </div> <!-- End container -->
+    </section> <!-- End section -->
+    <!-- Start Pricing section
+		=========================================== -->
+    <section class="pricing-table " id="pricing">
+        <div class="container">
+            <div class="row">
+
+                <!-- section title -->
+                <div class="col-12">
+                    <div class="title title-white text-center ">
+                        <h2>Our Greatest Plans</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium soluta deserunt eaque, est,
+                            quia hic
+                            odit sed incidunt officiis quidem.</p>
+                        <div class="border"></div>
+                    </div>
+                </div>
+                <!-- /section title -->
+
+                <!-- single pricing table -->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="pricing-item">
+
+                        <!-- plan name & value -->
+                        <div class="price-title">
+                            <h3>Basic</h3>
+                            <strong class="value">$19</strong>
+                            <p>Perfect for single freelancers who work by themselves</p>
+                        </div>
+                        <!-- /plan name & value -->
+
+                        <!-- plan description -->
+                        <ul>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> 1GB Disk Space</li>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> 10 Email Account</li>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> Script Installer</li>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> 1 GB Storage</li>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> 2 GB Bandwidth</li>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> 24/7 Tech Support</li>
+                        </ul>
+                        <!-- /plan description -->
+
+                        <!-- signup button -->
+                        <a class="btn btn-main" href="#">Signup</a>
+                        <!-- /signup button -->
+
+                    </div>
+                </div>
+                <!-- end single pricing table -->
+
+                <!-- single pricing table -->
+                <div class="col-md-4 col-sm-6 col-xs-12  ">
+                    <div class="pricing-item">
+
+                        <!-- plan name & value -->
+                        <div class="price-title">
+                            <h3>Standard</h3>
+                            <strong class="value">$39</strong>
+                            <p>Suitable for small businesses with up to 5 employees</p>
+                        </div>
+                        <!-- /plan name & value -->
+
+                        <!-- plan description -->
+                        <ul>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> 1GB Disk Space</li>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> 50 Email Account</li>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> Script Installer</li>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> 1 GB Storage</li>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> 10 GB Bandwidth</li>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> 24/7 Tech Support</li>
+                        </ul>
+                        <!-- /plan description -->
+
+                        <!-- signup button -->
+                        <a class="btn btn-main" href="#">Signup</a>
+                        <!-- /signup button -->
+
+                    </div>
+                </div>
+                <!-- end single pricing table -->
+
+                <!-- single pricing table -->
+                <div class="col-md-4 col-sm-6 col-xs-12 ">
+                    <div class="pricing-item">
+
+                        <!-- plan name & value -->
+                        <div class="price-title">
+                            <h3>Enterprise</h3>
+                            <strong class="value">$59</strong>
+                            <p>Great for large businesses with more than 5 employees</p>
+                        </div>
+                        <!-- /plan name & value -->
+
+                        <!-- plan description -->
+                        <ul>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> Unlimited Disk Space</li>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> Unlimited Email Account</li>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> Script Installer</li>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> Unlimited Storage</li>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> Unlimited Bandwidth</li>
+                            <li><i class="tf-ion-ios-arrow-forward"></i> 24/7 Tech Support</li>
+                        </ul>
+                        <!-- /plan description -->
+
+                        <!-- signup button -->
+                        <a class="btn btn-main" href="#">Signup</a>
+                        <!-- /signup button -->
+
+                    </div>
+                </div>
+                <!-- end single pricing table -->
+
+
+            </div> <!-- End row -->
+        </div> <!-- End container -->
+    </section> <!-- End section -->
     <!-- Start Testimonial
-                                                                                    =========================================== -->
+=========================================== -->
 
+    <section class="testimonial section" id="testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- testimonial wrapper -->
+                    <div class="testimonial-slider">
+                        <!-- testimonial single -->
+                        <div class="item text-center">
+                            <i class="tf-ion-chatbubbles"></i>
+                            <!-- client info -->
+                            <div class="client-details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos
+                                    earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates
+                                    alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
+                            </div>
+                            <!-- /client info -->
+                            <!-- client photo -->
+                            <div class="client-thumb">
+                                <img src="/images/client-logo/clients-1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="client-meta">
+                                <h3>William Martin</h3>
+                                <span>CEO , Company Name</span>
+                            </div>
+                            <!-- /client photo -->
+                        </div>
+                        <!-- /testimonial single -->
+
+                        <!-- testimonial single -->
+                        <div class="item text-center">
+                            <i class="tf-ion-chatbubbles"></i>
+                            <!-- client info -->
+                            <div class="client-details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos
+                                    earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates
+                                    alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
+                            </div>
+                            <!-- /client info -->
+                            <!-- client photo -->
+                            <div class="client-thumb">
+                                <img src="/images/client-logo/clients-2.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="client-meta">
+                                <h3>Emma Harrison</h3>
+                                <span>CEO , Company Name</span>
+                            </div>
+                            <!-- /client photo -->
+                        </div>
+                        <!-- /testimonial single -->
+
+                        <!-- testimonial single -->
+                        <div class="item text-center">
+                            <i class="tf-ion-chatbubbles"></i>
+                            <!-- client info -->
+                            <div class="client-details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos
+                                    earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates
+                                    alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
+                            </div>
+                            <!-- /client info -->
+                            <!-- client photo -->
+                            <div class="client-thumb">
+                                <img src="/images/client-logo/clients-3.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="client-meta">
+                                <h3>Alexander Lucas</h3>
+                                <span>CEO , Company Name</span>
+                            </div>
+                            <!-- /client photo -->
+                        </div>
+                        <!-- /testimonial single -->
+                    </div>
+                </div> <!-- end col lg 12 -->
+            </div> <!-- End row -->
+        </div> <!-- End container -->
+    </section> <!-- End Section -->
     <!--
-                                            		Start Blog Section
-                                                                                    		=========================================== -->
+		Start Blog Section
+		=========================================== -->
 
     <section class="blog" id="blog">
         <div class="container">
@@ -206,8 +778,8 @@
                     <div class="title text-center ">
                         <h2> Latest <span class="color">Posts</span></h2>
                         <div class="border"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus facere accusamus,
-                            reprehenderit libero
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus facere accusamus, reprehenderit
+                            libero
                             inventore nam.</p>
                     </div>
                 </div>
@@ -268,36 +840,29 @@
             </div> <!-- end row -->
         </div> <!-- end container -->
     </section> <!-- end section -->
+
+    <contact-view> </contact-view>
 </template>
 
 
 <script>
+
+import ContactView from './ContactView.vue';
 
 import HeroSliderComponent from '@/components/slider/HeroSliderComponent.vue';
 
 export default {
     name: 'HomeView',
     components: {
-        HeroSliderComponent
+        HeroSliderComponent,
+        ContactView
     },
     methods: {
 
     },
     mounted() {
-        (function ($) {
-            'use strict';
-            $('.hero-slider').slick({
-                autoplay: true,
-                infinite: true,
-                arrows: true,
-                prevArrow: '<button type=\'button\' class=\'prevArrow\'></button>',
-                nextArrow: '<button type=\'button\' class=\'nextArrow\'></button>',
-                dots: false,
-                autoplaySpeed: 7000,
-                pauseOnFocus: false,
-                pauseOnHover: false
-            });
-            $('.hero-slider').slickAnimation();
+
+
 
 
             // $('.testimonial-slider').slick({
@@ -312,12 +877,7 @@ export default {
             //     pauseOnHover: false
             // });
 
-            $('.testimonial-slider').slick({
-                infinite: true,
-                arrows: false,
-                autoplay: true,
-                autoplaySpeed: 2000
-            });
+            
 
             var scroll = new SmoothScroll('a[href*="#"]');
 
@@ -355,10 +915,6 @@ export default {
 
 
 
-
-
-
-        })(jQuery);
 
     }
 
