@@ -1,0 +1,16 @@
+{
+  "projects": {},
+  "targets": {
+    "kairostek-vue": {
+      "hosting": {
+        "kair": [
+          "kairostek-vue"
+        ],
+        "kairost": [
+          "kairostek"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

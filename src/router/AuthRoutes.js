@@ -9,7 +9,7 @@ const AuthRoutes = {
     // meta: {
     //     requiresAuth: false
     // },
-    redirect: '/auth/login',
+    redirect: '/view/dashboard/',
     children: [
         {
             name: 'login',
